@@ -1,5 +1,5 @@
-import { join } from "pathe";
 import { defu } from "defu";
+import { resolveTSConfig } from "pkg-types";
 import { meta } from "eslint-plugin-svelte";
 import antfu from "@antfu/eslint-config";
 import tailwind from "eslint-plugin-tailwindcss";
@@ -7,6 +7,8 @@ import tailwind from "eslint-plugin-tailwindcss";
 type UserOptions = Parameters<typeof antfu>[0];
 type UserConfigs = Parameters<typeof antfu>[1];
 type ESLintConfig = ReturnType<typeof antfu>;
+
+const tsconfigPath = await resolveTSConfig();
 
 /**
  * @ryoppippi's ESLint configuration.
@@ -33,7 +35,7 @@ export function ryoppippi(
       yaml: true,
       markdown: true,
       typescript: {
-        tsconfigPath: join(import.meta.dirname, "tsconfig.json"),
+        tsconfigPath: tsconfigPath,
       },
       tailwind: true,
       stylistic: {

@@ -8,7 +8,8 @@
       "npm:defu@^6.1.4": "npm:defu@6.1.4",
       "npm:eslint-plugin-svelte@^2.39.5": "npm:eslint-plugin-svelte@2.39.5_eslint@9.5.0_postcss@8.4.38",
       "npm:eslint-plugin-tailwindcss@^3.17.3": "npm:eslint-plugin-tailwindcss@3.17.3_tailwindcss@3.4.4__postcss@8.4.38",
-      "npm:pathe@^1.1.2": "npm:pathe@1.1.2"
+      "npm:pathe@^1.1.2": "npm:pathe@1.1.2",
+      "npm:pkg-types@^1.1.1": "npm:pkg-types@1.1.1"
     },
     "npm": {
       "@alloc/quick-lru@5.2.0": {
@@ -2482,7 +2483,7 @@
       "npm:defu@^6.1.4",
       "npm:eslint-plugin-svelte@^2.39.5",
       "npm:eslint-plugin-tailwindcss@^3.17.3",
-      "npm:pathe@^1.1.2"
+      "npm:pkg-types@^1.1.1"
     ]
   }
 }
