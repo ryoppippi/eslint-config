@@ -56,7 +56,10 @@ export function ryoppippi(
     },
     /* svelte rules */
     {
-      files: ["*.svelte"],
+      files: [
+        "**/*.svelte",
+        "**/*.svelte",
+      ],
       rules: {
         "svelte/button-has-type": "error",
         "svelte/require-each-key": "error",
