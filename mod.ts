@@ -3,6 +3,14 @@ import antfu from "@antfu/eslint-config";
 
 /**
  * @ryoppippi's ESLint configuration.
+ *
+ * @example
+ * ```ts
+ * // eslint.config.js
+ * import { ryoppippi } from "@ryoppippi/eslint-config";
+ *
+ * export default ryoppippi();
+ * ```
  */
 export function ryoppippi(): ReturnType<typeof antfu> {
   return antfu({
