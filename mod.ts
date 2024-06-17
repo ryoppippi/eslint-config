@@ -1,6 +1,5 @@
 import { defu } from "defu";
 import { resolveTSConfig } from "pkg-types";
-import { meta } from "eslint-plugin-svelte";
 import antfu from "@antfu/eslint-config";
 import tailwind from "eslint-plugin-tailwindcss";
 
@@ -25,8 +24,6 @@ export function ryoppippi(
   options: UserOptions,
   ...args: UserConfigs[]
 ): ESLintConfig {
-  meta.name satisfies string;
-
   const _options = defu(
     options,
     {

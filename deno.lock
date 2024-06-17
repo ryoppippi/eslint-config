@@ -6,7 +6,6 @@
       "npm:@types/node": "npm:@types/node@18.16.19",
       "npm:cronstrue": "npm:cronstrue@2.50.0",
       "npm:defu@^6.1.4": "npm:defu@6.1.4",
-      "npm:eslint-plugin-svelte@^2.39.5": "npm:eslint-plugin-svelte@2.39.5_eslint@9.5.0_postcss@8.4.38",
       "npm:eslint-plugin-tailwindcss@^3.17.3": "npm:eslint-plugin-tailwindcss@3.17.3_tailwindcss@3.4.4__postcss@8.4.38",
       "npm:pathe@^1.1.2": "npm:pathe@1.1.2",
       "npm:pkg-types@^1.1.1": "npm:pkg-types@1.1.1"
@@ -965,23 +964,6 @@
           "scslre": "scslre@0.3.0"
         }
       },
-      "eslint-plugin-svelte@2.39.5_eslint@9.5.0_postcss@8.4.38": {
-        "integrity": "sha512-OfY6r4437ZkmLf/rLoI2dG+3e5XY5oI1z2KD3wsK9Qb635YlDhyws59y6Brx+dOxiQIiMCFgB/DmUeXajqwpQg==",
-        "dependencies": {
-          "@eslint-community/eslint-utils": "@eslint-community/eslint-utils@4.4.0_eslint@9.5.0",
-          "@jridgewell/sourcemap-codec": "@jridgewell/sourcemap-codec@1.4.15",
-          "eslint": "eslint@9.5.0",
-          "eslint-compat-utils": "eslint-compat-utils@0.5.1_eslint@9.5.0",
-          "esutils": "esutils@2.0.3",
-          "known-css-properties": "known-css-properties@0.32.0",
-          "postcss": "postcss@8.4.38",
-          "postcss-load-config": "postcss-load-config@3.1.4_postcss@8.4.38",
-          "postcss-safe-parser": "postcss-safe-parser@6.0.0_postcss@8.4.38",
-          "postcss-selector-parser": "postcss-selector-parser@6.1.0",
-          "semver": "semver@7.6.2",
-          "svelte-eslint-parser": "svelte-eslint-parser@0.38.0_postcss@8.4.38"
-        }
-      },
       "eslint-plugin-tailwindcss@3.17.3_tailwindcss@3.4.4__postcss@8.4.38": {
         "integrity": "sha512-DVMVVUFQ+lPraRSuUk2I41XMnusXT6b3WaQZYlUHduULnERaqe9sNfmpRY1IyxlzmKoQxSbZ8IHRhl9ePo8PeA==",
         "dependencies": {
@@ -1582,10 +1564,6 @@
           "json-buffer": "json-buffer@3.0.1"
         }
       },
-      "known-css-properties@0.32.0": {
-        "integrity": "sha512-PXuex21brpp7qENI143ZL5cWQcMR4IZVeeZv9ew6dg+bZX2xRUu/NzGKudZJY5DO4APiMkNPYIF8VGIdY08Tdw==",
-        "dependencies": {}
-      },
       "levn@0.4.1": {
         "integrity": "sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==",
         "dependencies": {
@@ -1934,14 +1912,6 @@
           "postcss": "postcss@8.4.38"
         }
       },
-      "postcss-load-config@3.1.4_postcss@8.4.38": {
-        "integrity": "sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==",
-        "dependencies": {
-          "lilconfig": "lilconfig@2.1.0",
-          "postcss": "postcss@8.4.38",
-          "yaml": "yaml@1.10.2"
-        }
-      },
       "postcss-load-config@4.0.2_postcss@8.4.38": {
         "integrity": "sha512-bSVhyJGL00wMVoPUzAVAnbEoWyqRxkjv64tUl427SKnPrENtq6hJwUojroMz2VB+Q1edmi4IfrAPpami5VVgMQ==",
         "dependencies": {
@@ -1955,18 +1925,6 @@
         "dependencies": {
           "postcss": "postcss@8.4.38",
           "postcss-selector-parser": "postcss-selector-parser@6.1.0"
-        }
-      },
-      "postcss-safe-parser@6.0.0_postcss@8.4.38": {
-        "integrity": "sha512-FARHN8pwH+WiS2OPCxJI8FuRJpTVnn6ZNFiqAM2aeW2LwTHWWmWgIyKC6cUo0L8aeKiF/14MNvnpls6R2PBeMQ==",
-        "dependencies": {
-          "postcss": "postcss@8.4.38"
-        }
-      },
-      "postcss-scss@4.0.9_postcss@8.4.38": {
-        "integrity": "sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==",
-        "dependencies": {
-          "postcss": "postcss@8.4.38"
         }
       },
       "postcss-selector-parser@6.1.0": {
@@ -2229,16 +2187,6 @@
         "integrity": "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==",
         "dependencies": {}
       },
-      "svelte-eslint-parser@0.38.0_postcss@8.4.38": {
-        "integrity": "sha512-5qyDMW19cqafbRua5xLKI4wHfHapDx1emu93Vl3Po+2qcV9mSXL/XhmgBN23S9ddE4SQ7vrF7V6Q2a+VMfmUQg==",
-        "dependencies": {
-          "eslint-scope": "eslint-scope@7.2.2",
-          "eslint-visitor-keys": "eslint-visitor-keys@3.4.3",
-          "espree": "espree@9.6.1_acorn@8.12.0",
-          "postcss": "postcss@8.4.38",
-          "postcss-scss": "postcss-scss@4.0.9_postcss@8.4.38"
-        }
-      },
       "synckit@0.6.2": {
         "integrity": "sha512-Vhf+bUa//YSTYKseDiiEuQmhGCoIF3CVBhunm3r/DQnYiGT4JssmnKQc44BIyOZRK2pKjXXAgbhfmbeoC9CJpA==",
         "dependencies": {
@@ -2442,10 +2390,6 @@
           "yaml": "yaml@2.4.5"
         }
       },
-      "yaml@1.10.2": {
-        "integrity": "sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==",
-        "dependencies": {}
-      },
       "yaml@2.4.5": {
         "integrity": "sha512-aBx2bnqDzVOyNKfsysjA2ms5ZlnjSAW2eG3/L5G/CSujfjLJTJsEw1bGw8kCf04KodQWk1pxlGnZ56CRxiawmg==",
         "dependencies": {}
@@ -2481,7 +2425,6 @@
     "dependencies": [
       "npm:@antfu/eslint-config@^2.21.1",
       "npm:defu@^6.1.4",
-      "npm:eslint-plugin-svelte@^2.39.5",
       "npm:eslint-plugin-tailwindcss@^3.17.3",
       "npm:pkg-types@^1.1.1"
     ]
