@@ -38,7 +38,7 @@ export function ryoppippi(
         quotes: "single",
         semi: true,
       },
-    } as const,
+    } as const satisfies UserOptions,
   );
 
   return antfu(
