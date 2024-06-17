@@ -1,8 +1,10 @@
 import path from "pathe";
 import antfu from "@antfu/eslint-config";
+import { meta } from "eslint-plugin-svelte";
 
 type UserConfigs = Parameters<typeof antfu>[1];
 type ESLintConfig = ReturnType<typeof antfu>;
+
 /**
  * @ryoppippi's ESLint configuration.
  *
@@ -15,6 +17,8 @@ type ESLintConfig = ReturnType<typeof antfu>;
  * ```
  */
 export function ryoppippi(...args: UserConfigs[]): ESLintConfig {
+  meta.name satisfies string;
+
   return antfu({
     formatters: true,
     svelte: true,
