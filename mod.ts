@@ -1,6 +1,8 @@
 import path from "pathe";
 import antfu from "@antfu/eslint-config";
 
+type UserConfigs = Parameters<typeof antfu>[1];
+type ESLintConfig = ReturnType<typeof antfu>;
 /**
  * @ryoppippi's ESLint configuration.
  *
@@ -12,7 +14,7 @@ import antfu from "@antfu/eslint-config";
  * export default ryoppippi();
  * ```
  */
-export function ryoppippi(): ReturnType<typeof antfu> {
+export function ryoppippi(...args: UserConfigs[]): ESLintConfig {
   return antfu({
     formatters: true,
     svelte: true,
@@ -44,5 +46,5 @@ export function ryoppippi(): ReturnType<typeof antfu> {
       "svelte/html-self-closing": ["error", "all"],
       "svelte/sort-attributes": "error",
     },
-  });
+  }, ...args);
 }
