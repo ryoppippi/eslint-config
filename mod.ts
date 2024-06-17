@@ -1,8 +1,8 @@
 import { join } from "pathe";
 import { defu } from "defu";
+import { meta } from "eslint-plugin-svelte";
 import antfu from "@antfu/eslint-config";
 import tailwind from "eslint-plugin-tailwindcss";
-import { meta } from "eslint-plugin-svelte";
 
 type UserOptions = Parameters<typeof antfu>[0];
 type UserConfigs = Parameters<typeof antfu>[1];
@@ -25,44 +25,51 @@ export function ryoppippi(
 ): ESLintConfig {
   meta.name satisfies string;
 
+  const _options = defu(
+    options,
+    {
+      formatters: true,
+      svelte: true,
+      yaml: true,
+      markdown: true,
+      typescript: {
+        tsconfigPath: join(import.meta.dirname, "tsconfig.json"),
+      },
+      tailwind: true,
+      stylistic: {
+        indent: "tab",
+        quotes: "single",
+        semi: true,
+      },
+    } as const,
+  );
+
   return antfu(
-    defu(
-      options,
+    _options,
+    [
+      /** general rules */
       {
-        formatters: true,
-        svelte: true,
-        yaml: true,
-        markdown: true,
-        typescript: {
-          tsconfigPath: join(import.meta.dirname, "tsconfig.json"),
+        rules: {
+          /* eslint rules */
+          "eqeqeq": ["error", "always", { null: "ignore" }],
+          "no-unexpected-multiline": "error",
+          "no-unreachable": "error",
         },
-        stylistic: {
-          indent: "tab",
-          quotes: "single",
-          semi: true,
+      },
+      /* svelte rules */
+      {
+        files: ["*.svelte"],
+        rules: {
+          "svelte/indent": ["error", {
+            indent: "tab",
+            alignAttributesVertically: true,
+          }],
+          "svelte/html-self-closing": ["error", "all"],
+          "svelte/sort-attributes": "error",
         },
-      } as const,
-    ),
-    /** general rules */ {
-      rules: {
-        /* eslint rules */
-        "eqeqeq": ["error", "always", { null: "ignore" }],
-        "no-unexpected-multiline": "error",
-        "no-unreachable": "error",
       },
-    },
-    /* svelte rules */ {
-      files: ["*.svelte"],
-      rules: {
-        "svelte/indent": ["error", {
-          indent: "tab",
-          alignAttributesVertically: true,
-        }],
-        "svelte/html-self-closing": ["error", "all"],
-        "svelte/sort-attributes": "error",
-      },
-    },
-    ...tailwind.config["flat/default"],
-    ...args,
+      ...[_options.tailwind && tailwind.configs["flat/recommended"]],
+      ...args,
+    ].flat(),
   );
 }
