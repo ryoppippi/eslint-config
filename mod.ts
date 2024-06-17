@@ -1,4 +1,4 @@
-import path from "pathe";
+import { join } from "pathe";
 import antfu from "@antfu/eslint-config";
 import tailwind from "eslint-plugin-tailwindcss";
 import { meta } from "eslint-plugin-svelte";
@@ -24,11 +24,10 @@ export function ryoppippi(...args: UserConfigs[]): ESLintConfig {
     {
       formatters: true,
       svelte: true,
-      unocss: true,
       yaml: true,
       markdown: true,
       typescript: {
-        tsconfigPath: path.join(import.meta.dirname, "tsconfig.json"),
+        tsconfigPath: join(import.meta.dirname, "tsconfig.json"),
       },
       stylistic: {
         indent: "tab",
