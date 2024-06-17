@@ -38,6 +38,7 @@ export function ryoppippi(
         quotes: "single",
         semi: true,
       },
+      lessOpinionated: true,
     } as const satisfies UserOptions,
   );
 
@@ -50,6 +51,8 @@ export function ryoppippi(
         "eqeqeq": ["error", "always", { null: "ignore" }],
         "no-unexpected-multiline": "error",
         "no-unreachable": "error",
+        "curly": ["error", "all"],
+        "antfu/top-level-function": "error",
       },
     },
     /* svelte rules */
