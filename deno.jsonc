@@ -9,7 +9,6 @@
   "imports": {
     "@antfu/eslint-config": "npm:@antfu/eslint-config@^2.21.1",
     "defu": "npm:defu@^6.1.4",
-    "eslint-plugin-readable-tailwind": "npm:eslint-plugin-readable-tailwind@^1.5.2",
     "pkg-types": "npm:pkg-types@^1.1.1"
   },
   "exports": "./mod.ts",

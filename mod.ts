@@ -1,7 +1,6 @@
 import { defu } from "defu";
 import { resolveTSConfig } from "pkg-types";
 import antfu from "@antfu/eslint-config";
-import readableTW from "eslint-plugin-readable-tailwind";
 
 type UserOptions = Parameters<typeof antfu>[0];
 type UserConfigs = Parameters<typeof antfu>[1];
@@ -34,7 +33,6 @@ export function ryoppippi(
       typescript: {
         tsconfigPath: tsconfigPath,
       },
-      tailwind: true,
       stylistic: {
         indent: "tab",
         quotes: "single",
@@ -85,19 +83,6 @@ export function ryoppippi(
         ],
       },
     },
-    _options.tailwind
-      ? {
-        plugins: { "readable-tailwind": readableTW },
-        rules: {
-          "readable-tailwind/multiline": [
-            "warn",
-            { indent: "tab", group: "emptyLine", classesPerLine: 1 },
-          ],
-          "readable-tailwind/sort-classes": "warn",
-          "readable-tailwind/no-unnecessary-whitespace": "warn",
-        },
-      }
-      : {},
     ...args,
   );
 }
