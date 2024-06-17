@@ -5,6 +5,7 @@
       "npm:@antfu/eslint-config@^2.21.1": "npm:@antfu/eslint-config@2.21.1_eslint@9.5.0_@typescript-eslint+parser@7.13.0__eslint@8.57.0_vue-eslint-parser@9.4.3__eslint@9.5.0_@typescript-eslint+eslint-plugin@7.13.0__@typescript-eslint+parser@7.13.0___eslint@8.57.0__eslint@8.57.0",
       "npm:@types/node": "npm:@types/node@18.16.19",
       "npm:cronstrue": "npm:cronstrue@2.50.0",
+      "npm:defu@^6.1.4": "npm:defu@6.1.4",
       "npm:eslint-plugin-svelte@^2.39.5": "npm:eslint-plugin-svelte@2.39.5_eslint@9.5.0_postcss@8.4.38",
       "npm:eslint-plugin-tailwindcss@^3.17.3": "npm:eslint-plugin-tailwindcss@3.17.3_tailwindcss@3.4.4__postcss@8.4.38",
       "npm:pathe@^1.1.2": "npm:pathe@1.1.2"
@@ -736,6 +737,10 @@
       },
       "deep-is@0.1.4": {
         "integrity": "sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==",
+        "dependencies": {}
+      },
+      "defu@6.1.4": {
+        "integrity": "sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==",
         "dependencies": {}
       },
       "didyoumean@1.2.2": {
@@ -2474,6 +2479,7 @@
   "workspace": {
     "dependencies": [
       "npm:@antfu/eslint-config@^2.21.1",
+      "npm:defu@^6.1.4",
       "npm:eslint-plugin-svelte@^2.39.5",
       "npm:eslint-plugin-tailwindcss@^3.17.3",
       "npm:pathe@^1.1.2"

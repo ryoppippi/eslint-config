@@ -1,8 +1,10 @@
 import { join } from "pathe";
+import { defu } from "defu";
 import antfu from "@antfu/eslint-config";
 import tailwind from "eslint-plugin-tailwindcss";
 import { meta } from "eslint-plugin-svelte";
 
+type UserOptions = Parameters<typeof antfu>[0];
 type UserConfigs = Parameters<typeof antfu>[1];
 type ESLintConfig = ReturnType<typeof antfu>;
 
@@ -17,24 +19,30 @@ type ESLintConfig = ReturnType<typeof antfu>;
  * export default ryoppippi();
  * ```
  */
-export function ryoppippi(...args: UserConfigs[]): ESLintConfig {
+export function ryoppippi(
+  options: UserOptions,
+  ...args: UserConfigs[]
+): ESLintConfig {
   meta.name satisfies string;
 
   return antfu(
-    {
-      formatters: true,
-      svelte: true,
-      yaml: true,
-      markdown: true,
-      typescript: {
-        tsconfigPath: join(import.meta.dirname, "tsconfig.json"),
-      },
-      stylistic: {
-        indent: "tab",
-        quotes: "single",
-        semi: true,
-      },
-    },
+    defu(
+      options,
+      {
+        formatters: true,
+        svelte: true,
+        yaml: true,
+        markdown: true,
+        typescript: {
+          tsconfigPath: join(import.meta.dirname, "tsconfig.json"),
+        },
+        stylistic: {
+          indent: "tab",
+          quotes: "single",
+          semi: true,
+        },
+      } as const,
+    ),
     /** general rules */ {
       rules: {
         /* eslint rules */
