@@ -1,7 +1,7 @@
 import { defu } from "defu";
 import { resolveTSConfig } from "pkg-types";
 import antfu from "@antfu/eslint-config";
-import tailwind from "eslint-plugin-tailwindcss";
+import readableTW from "eslint-plugin-readable-tailwind";
 
 type UserOptions = Parameters<typeof antfu>[0];
 type UserConfigs = Parameters<typeof antfu>[1];
@@ -45,30 +45,40 @@ export function ryoppippi(
 
   return antfu(
     _options,
-    [
-      /** general rules */
-      {
-        rules: {
-          /* eslint rules */
-          "eqeqeq": ["error", "always", { null: "ignore" }],
-          "no-unexpected-multiline": "error",
-          "no-unreachable": "error",
-        },
+    /** general rules */
+    {
+      rules: {
+        /* eslint rules */
+        "eqeqeq": ["error", "always", { null: "ignore" }],
+        "no-unexpected-multiline": "error",
+        "no-unreachable": "error",
       },
-      /* svelte rules */
-      {
-        files: ["*.svelte"],
-        rules: {
-          "svelte/indent": ["error", {
-            indent: "tab",
-            alignAttributesVertically: true,
-          }],
-          "svelte/html-self-closing": ["error", "all"],
-          "svelte/sort-attributes": "error",
-        },
+    },
+    /* svelte rules */
+    {
+      files: ["*.svelte"],
+      rules: {
+        "svelte/indent": ["error", {
+          indent: "tab",
+          alignAttributesVertically: true,
+        }],
+        "svelte/html-self-closing": ["error", "all"],
+        "svelte/sort-attributes": "error",
       },
-      ...[_options.tailwind && tailwind.configs["flat/recommended"]],
-      ...args,
-    ].flat(),
+    },
+    _options.tailwind
+      ? {
+        plugins: { "readable-tailwind": readableTW },
+        rules: {
+          "readable-tailwind/multiline": [
+            "warn",
+            { indent: "tab", group: "emptyLine", classesPerLine: 1 },
+          ],
+          "readable-tailwind/sort-classes": "warn",
+          "readable-tailwind/no-unnecessary-whitespace": "warn",
+        },
+      }
+      : {},
+    ...args,
   );
 }
