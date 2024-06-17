@@ -58,12 +58,28 @@ export function ryoppippi(
     {
       files: ["*.svelte"],
       rules: {
+        "svelte/button-has-type": "error",
+        "svelte/require-each-key": "error",
+        "svelte/valid-each-key": "error",
+        "svelte/no-reactive-literals": "error",
+        "svelte/no-reactive-functions": "error",
+
+        /* stylic */
         "svelte/indent": ["error", {
           indent: "tab",
           alignAttributesVertically: true,
         }],
         "svelte/html-self-closing": ["error", "all"],
         "svelte/sort-attributes": "error",
+        "svelte/prefer-class-directive": "warn",
+        "svelte/prefer-style-directive": "warn",
+        "svelte/first-attribute-linebreak": [
+          "error",
+          {
+            multiline: "below",
+            singleline: "beside",
+          },
+        ],
       },
     },
     _options.tailwind
