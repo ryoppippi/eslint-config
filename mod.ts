@@ -49,6 +49,10 @@ export function ryoppippi(
       rules: {
         /* eslint rules */
         "eqeqeq": ["error", "always", { null: "ignore" }],
+        "ts/switch-exhaustiveness-check": ["error", {
+          requireDefaultForNonUnion: true,
+          allowDefaultCaseForExhaustiveSwitch: true,
+        }],
         "no-unexpected-multiline": "error",
         "no-unreachable": "error",
         "curly": ["error", "all"],
