@@ -12,10 +12,13 @@
     "pkg-types": "npm:pkg-types@^1.1.1"
   },
   "exports": "./mod.ts",
-  "keywords": [
-    "random",
-    "regex",
-    "typescript",
-    "typesafe"
-  ]
+  "publish": {
+    "exclude": [
+      ".vscode",
+      ".github",
+      ".gitignore",
+      ".coverage"
+    ]
+  },
+  "keywords": []
 }
