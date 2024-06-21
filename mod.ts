@@ -55,6 +55,10 @@ export function ryoppippi(
         }],
         "no-unexpected-multiline": "error",
         "no-unreachable": "error",
+        "no-unused-vars": ["error", {
+          args: "none",
+          destructuredArrayIgnorePattern: "^_",
+        }],
         "curly": ["error", "all"],
         "antfu/top-level-function": "error",
       },
