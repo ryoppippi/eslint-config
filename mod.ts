@@ -49,6 +49,7 @@ export function ryoppippi(
       rules: {
         /* eslint rules */
         "eqeqeq": ["error", "always", { null: "ignore" }],
+        "ts/consistent-type-definitions": ["error", "type"],
         "no-unexpected-multiline": "error",
         "no-unreachable": "error",
         "no-unused-vars": ["error", {
