@@ -37,6 +37,7 @@ export function ryoppippi(
         indent: "tab",
         quotes: "single",
         semi: true,
+        jsx: true,
       },
       lessOpinionated: true,
     } as const satisfies UserOptions,
