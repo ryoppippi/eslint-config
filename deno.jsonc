@@ -7,7 +7,7 @@
     ]
   },
   "imports": {
-    "@antfu/eslint-config": "npm:@antfu/eslint-config@^2.21.1",
+    "@antfu/eslint-config": "npm:@antfu/eslint-config@^2.21.2",
     "defu": "npm:defu@^6.1.4",
     "pkg-types": "npm:pkg-types@^1.1.1"
   },
