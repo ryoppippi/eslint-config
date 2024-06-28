@@ -37,6 +37,7 @@ export function ryoppippi(
         indent: "tab",
         quotes: "single",
         semi: true,
+        jsx: true,
       },
       lessOpinionated: true,
     } as const satisfies UserOptions,
@@ -50,6 +51,10 @@ export function ryoppippi(
         /* eslint rules */
         "eqeqeq": ["error", "always", { null: "ignore" }],
         "ts/consistent-type-definitions": ["error", "type"],
+        "ts/switch-exhaustiveness-check": ["error", {
+          requireDefaultForNonUnion: true,
+          allowDefaultCaseForExhaustiveSwitch: true,
+        }],
         "no-unexpected-multiline": "error",
         "no-unreachable": "error",
         "no-unused-vars": ["error", {
