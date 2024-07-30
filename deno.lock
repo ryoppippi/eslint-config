@@ -8,7 +8,7 @@
       "npm:cronstrue": "npm:cronstrue@2.50.0",
       "npm:defu@^6.1.4": "npm:defu@6.1.4",
       "npm:pathe@^1.1.2": "npm:pathe@1.1.2",
-      "npm:pkg-types@^1.1.1": "npm:pkg-types@1.1.1"
+      "npm:pkg-types@^1.1.1": "npm:pkg-types@1.1.3"
     },
     "npm": {
       "@antfu/eslint-config@2.21.2_eslint@9.5.0_@typescript-eslint+parser@7.14.1__eslint@8.57.0_vue-eslint-parser@9.4.3__eslint@9.5.0_@typescript-eslint+eslint-plugin@7.14.1__@typescript-eslint+parser@7.14.1___eslint@8.57.0__eslint@8.57.0": {
@@ -447,6 +447,10 @@
       },
       "acorn@8.12.0": {
         "integrity": "sha512-RTvkC4w+KNXrM39/lWCUaG0IbRkWdCv7W/IOW9oU6SawyxulvkQy5HQPVTKxEjczcUvapcrw3cFx/60VN/NRNw==",
+        "dependencies": {}
+      },
+      "acorn@8.12.1": {
+        "integrity": "sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==",
         "dependencies": {}
       },
       "ajv@6.12.6": {
@@ -1523,10 +1527,10 @@
       "mlly@1.7.1": {
         "integrity": "sha512-rrVRZRELyQzrIUAVMHxP97kv+G786pHmOKzuFII8zDYahFBS7qnHh2AlYSl1GAHhaMPCz6/oHjVMcfFYgFYHgA==",
         "dependencies": {
-          "acorn": "acorn@8.12.0",
+          "acorn": "acorn@8.12.1",
           "pathe": "pathe@1.1.2",
-          "pkg-types": "pkg-types@1.1.1",
-          "ufo": "ufo@1.5.3"
+          "pkg-types": "pkg-types@1.1.3",
+          "ufo": "ufo@1.5.4"
         }
       },
       "ms@2.1.2": {
@@ -1700,6 +1704,14 @@
       },
       "pkg-types@1.1.1": {
         "integrity": "sha512-ko14TjmDuQJ14zsotODv7dBlwxKhUKQEhuhmbqo1uCi9BB0Z2alo/wAXg6q1dTR5TyuqYyWhjtfe/Tsh+X28jQ==",
+        "dependencies": {
+          "confbox": "confbox@0.1.7",
+          "mlly": "mlly@1.7.1",
+          "pathe": "pathe@1.1.2"
+        }
+      },
+      "pkg-types@1.1.3": {
+        "integrity": "sha512-+JrgthZG6m3ckicaOB74TwQ+tBWsFl3qVQg7mN8ulwSOElJ7gBhKzj2VkCPnZ4NlF6kEquYU+RIYNVAvzd54UA==",
         "dependencies": {
           "confbox": "confbox@0.1.7",
           "mlly": "mlly@1.7.1",
@@ -1999,6 +2011,10 @@
       },
       "ufo@1.5.3": {
         "integrity": "sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==",
+        "dependencies": {}
+      },
+      "ufo@1.5.4": {
+        "integrity": "sha512-UsUk3byDzKd04EyoZ7U4DOlxQaD14JUKQl6/P7wiX4FNvUfm3XL246n9W5AmqwW5RSFJ27NAuM0iLscAOYUiGQ==",
         "dependencies": {}
       },
       "unicorn-magic@0.1.0": {
