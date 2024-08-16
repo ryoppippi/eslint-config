@@ -24,4 +24,4 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Publish
-        run: pnpm dlx jsr publish
+        run: pnpm publish
