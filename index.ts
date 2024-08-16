@@ -21,7 +21,7 @@ const tsconfigPath = await resolveTSConfig();
  */
 export async function ryoppippi(
 	options: UserOptions,
-	...args: UserConfigs[]
+	...args: UserConfigs[ ]
 ): Promise<ESLintConfig> {
 	const _options = defu(
 		options,
@@ -32,6 +32,11 @@ export async function ryoppippi(
 			markdown: true,
 			typescript: {
 				tsconfigPath,
+			},
+			javascript: {
+				overrides: {
+					eqeqeq: ['error', 'always', { null: 'ignore' }],
+				},
 			},
 			stylistic: {
 				indent: 'tab',
@@ -44,12 +49,11 @@ export async function ryoppippi(
 	);
 
 	return antfu(
-		_options,
+		_options as UserOptions,
 		/** general rules */
 		{
 			/** eslint rules */
 			rules: {
-				'eqeqeq': ['error', 'always', { null: 'ignore' }],
 				'ts/consistent-type-definitions': ['error', 'type'],
 				// "ts/switch-exhaustiveness-check": ["error", {
 				//   requireDefaultForNonUnion: true,
