@@ -10,14 +10,14 @@ npx jsr add @ryoppippi/eslint-config
 
 ## Usage
 
-
 ```ts
 // eslint.config.js
 
-import { ryoppippi } from '@ryoppippi/eslint-config'
+import { ryoppippi } from '@ryoppippi/eslint-config';
 
-export default ryoppippi({ /* options */ })
+export default ryoppippi({ /* options */ });
 ```
 
 ## License
+
 [MIT](./LICENSE)
