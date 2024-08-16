@@ -20,8 +20,9 @@ jobs:
         with:
           fetch-depth: 0
       - run: corepack enable
+      - run: pnpm i
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: Publish
-        run: pnpm publish
+        run: pnpm jsr

@@ -11,7 +11,7 @@
 		"lint": "eslint .",
 		"format": "nr lint --fix",
 		"release": "nr lint && nlx bumpp",
-		"publish": "nlx pkg-to-jsr && nlx jsr publish"
+		"jsr": "nlx pkg-to-jsr && nlx jsr publish"
 	},
 	"dependencies": {
 		"@antfu/eslint-config": "^2.26.0",
