@@ -33,7 +33,14 @@ export async function ryoppippi(
 			typescript: {
 				tsconfigPath,
 				overrides: {
-					'ts/strict-boolean-expressions': ['error', { allowNullableBoolean: true, allowNullableObject: false }],
+					'ts/consistent-type-definitions': ['error', 'type'],
+					'ts/no-unused-vars': ['error', {
+						args: 'none',
+						destructuredArrayIgnorePattern: '^_',
+					}],
+				},
+				overridesTypeAware: {
+					'ts/strict-boolean-expressions': ['error', { allowNullableBoolean: false, allowNullableObject: false, allowString: false }],
 				},
 			},
 			javascript: {
@@ -57,18 +64,7 @@ export async function ryoppippi(
 		{
 			/** eslint rules */
 			rules: {
-				'ts/consistent-type-definitions': ['error', 'type'],
-				'ts/strict-boolean-expressions': ['error', { allowNullableBoolean: true, allowNullableObject: false }],
-				// "ts/switch-exhaustiveness-check": ["error", {
-				//   requireDefaultForNonUnion: true,
-				//   allowDefaultCaseForExhaustiveSwitch: true,
-				// }],
-				'no-unexpected-multiline': 'error',
 				'no-unreachable': 'error',
-				'no-unused-vars': ['error', {
-					args: 'none',
-					destructuredArrayIgnorePattern: '^_',
-				}],
 				'curly': ['error', 'all'],
 				'antfu/top-level-function': 'error',
 			},
