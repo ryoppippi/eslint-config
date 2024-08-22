@@ -17,7 +17,9 @@ import { ryoppippi } from '@ryoppippi/eslint-config';
 
 export default ryoppippi({ /* options */ });
 ```
+
 ## Rules
+
 You can inspect available rules [here](https://eslint-config.ryoppippi.com)
 
 ## License
