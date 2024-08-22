@@ -32,6 +32,9 @@ export async function ryoppippi(
 			markdown: true,
 			typescript: {
 				tsconfigPath,
+				overrides: {
+					'ts/strict-boolean-expressions': ['error', { allowNullableBoolean: true, allowNullableObject: false }],
+				},
 			},
 			javascript: {
 				overrides: {
@@ -55,6 +58,7 @@ export async function ryoppippi(
 			/** eslint rules */
 			rules: {
 				'ts/consistent-type-definitions': ['error', 'type'],
+				'ts/strict-boolean-expressions': ['error', { allowNullableBoolean: true, allowNullableObject: false }],
 				// "ts/switch-exhaustiveness-check": ["error", {
 				//   requireDefaultForNonUnion: true,
 				//   allowDefaultCaseForExhaustiveSwitch: true,
