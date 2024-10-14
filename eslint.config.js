@@ -1,6 +1,7 @@
-import { tsImport } from 'tsx/esm/api';
+import { importx } from 'importx';
 
-const { ryoppippi } = await tsImport('@ryoppippi/eslint-config', import.meta.url);
+/** eslint-disable-next-line antfu/no-top-level-await */
+const { ryoppippi } = await importx('@ryoppippi/eslint-config', import.meta.url);
 
 export default ryoppippi({
 	svelte: false,

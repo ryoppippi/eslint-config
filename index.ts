@@ -1,11 +1,12 @@
+import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
-import antfu from '@antfu/eslint-config';
 
 type UserOptions = Parameters<typeof antfu>[0];
 type UserConfigs = Parameters<typeof antfu>[1];
 type ESLintConfig = ReturnType<typeof antfu>;
 
+// eslint-disable-next-line antfu/no-top-level-await
 const tsconfigPath = await resolveTSConfig();
 
 /**
@@ -70,37 +71,39 @@ export async function ryoppippi(
 			},
 		},
 		/* svelte rules */
-		{
-			files: [
-				'**/*.svelte',
-				'**/*.svelte',
-			],
-			rules: {
-				'svelte/valid-compile': 'off',
-				'svelte/button-has-type': 'error',
-				'svelte/require-each-key': 'error',
-				'svelte/valid-each-key': 'error',
-				'svelte/no-reactive-literals': 'error',
-				'svelte/no-reactive-functions': 'error',
+		(!_options.svelte)
+			? {}
+			: {
+					files: [
+						'**/*.svelte',
+						'**/*.svelte',
+					],
+					rules: {
+						'svelte/valid-compile': 'off',
+						'svelte/button-has-type': 'error',
+						'svelte/require-each-key': 'error',
+						'svelte/valid-each-key': 'error',
+						'svelte/no-reactive-literals': 'error',
+						'svelte/no-reactive-functions': 'error',
 
-				/* stylic */
-				'svelte/indent': ['error', {
-					indent: 'tab',
-					alignAttributesVertically: true,
-				}],
-				'svelte/html-self-closing': ['error', 'all'],
-				'svelte/sort-attributes': 'error',
-				'svelte/prefer-class-directive': 'warn',
-				'svelte/prefer-style-directive': 'warn',
-				'svelte/first-attribute-linebreak': [
-					'error',
-					{
-						multiline: 'below',
-						singleline: 'beside',
+						/* stylic */
+						'svelte/indent': ['error', {
+							indent: 'tab',
+							alignAttributesVertically: true,
+						}],
+						'svelte/html-self-closing': ['error', 'all'],
+						'svelte/sort-attributes': 'error',
+						'svelte/prefer-class-directive': 'warn',
+						'svelte/prefer-style-directive': 'warn',
+						'svelte/first-attribute-linebreak': [
+							'error',
+							{
+								multiline: 'below',
+								singleline: 'beside',
+							},
+						],
 					},
-				],
-			},
-		},
+				},
 		...args,
 	);
 }
