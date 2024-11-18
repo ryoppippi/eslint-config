@@ -22,7 +22,7 @@ importers:
         version: 1.2.1
     devDependencies:
       eslint:
-        specifier: ^9.14.0
+        specifier: ^9.15.0
         version: 9.15.0(jiti@2.4.0)
       eslint-plugin-format:
         specifier: ^0.1.2
