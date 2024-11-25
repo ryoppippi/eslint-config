@@ -23,6 +23,6 @@
 		"eslint": "^9.15.0",
 		"eslint-plugin-format": "^0.1.2",
 		"importx": "^0.5.0",
-		"typescript": "^5.6.3"
+		"typescript": "^5.7.2"
 	}
 }
