@@ -24,5 +24,10 @@
 		"eslint-plugin-format": "^1.0.1",
 		"importx": "^0.5.2",
 		"typescript": "^5.8.2"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
 	}
 }
