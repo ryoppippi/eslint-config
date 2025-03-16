@@ -2,7 +2,7 @@
 	"name": "@ryoppippi/eslint-config",
 	"type": "module",
 	"version": "0.0.26",
-	"packageManager": "pnpm@10.6.2",
+	"packageManager": "pnpm@10.6.3",
 	"author": "ryoppippi",
 	"license": "MIT",
 	"exports": "./index.ts",
