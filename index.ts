@@ -7,7 +7,7 @@ type UserConfigs = Parameters<typeof antfu>[1];
 type ESLintConfig = ReturnType<typeof antfu>;
 
 // eslint-disable-next-line antfu/no-top-level-await
-const tsconfigPath = await resolveTSConfig();
+const tsconfigPath = await resolveTSConfig().then(path => path).catch(() => undefined);
 
 /**
  * @ryoppippi's ESLint configuration.
@@ -58,6 +58,10 @@ export async function ryoppippi(
 			lessOpinionated: true,
 		} as const satisfies UserOptions,
 	);
+
+	if (typeof _options.typescript !== 'boolean' && _options?.typescript?.tsconfigPath == null) {
+		console.warn('tsconfig.json is not found.');
+	}
 
 	return antfu(
 		_options as UserOptions,
