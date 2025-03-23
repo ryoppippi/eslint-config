@@ -15,7 +15,7 @@
 	},
 	"dependencies": {
 		"@antfu/eslint-config": "^4.10.1",
-		"@antfu/ni": "^24.2.0",
+		"@antfu/ni": "^24.3.0",
 		"defu": "^6.1.4",
 		"pkg-types": "^2.1.0"
 	},
