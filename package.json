@@ -20,7 +20,7 @@
 		"pkg-types": "^2.1.0"
 	},
 	"devDependencies": {
-		"eslint": "^9.22.0",
+		"eslint": "^9.23.0",
 		"eslint-plugin-format": "^1.0.1",
 		"importx": "^0.5.2",
 		"typescript": "^5.8.2"
