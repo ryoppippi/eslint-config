@@ -4,11 +4,11 @@ import { interopDefault } from '@antfu/eslint-config';
  * Tailwind CSS configuration.
  */
 export async function tailwind(enabled: boolean = false) {
-	const pluginTailwindcss = await interopDefault(import('eslint-plugin-tailwindcss'));
-
 	if (!enabled) {
 		return [];
 	}
+
+	const pluginTailwindcss = await interopDefault(import('eslint-plugin-tailwindcss'));
 	return [
 		...pluginTailwindcss.configs['flat/recommended'],
 		{
