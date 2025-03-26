@@ -25,8 +25,8 @@
 		"lint:eslint": "eslint .",
 		"lint:publint": "eslint .",
 		"format": "nr lint:eslint --fix",
-		"release": "nr lint && nlx bumpp",
-		"prepack": "nr build"
+		"prepack": "nr build && clean-pkg-json",
+		"release": "nr lint && nlx bumpp && pnpm publish"
 	},
 	"peerDependencies": {
 		"eslint-plugin-tailwindcss": "^3.18.0"
@@ -44,6 +44,7 @@
 	},
 	"devDependencies": {
 		"@types/eslint-plugin-tailwindcss": "^3.17.0",
+		"clean-pkg-json": "^1.2.1",
 		"eslint": "^9.23.0",
 		"eslint-plugin-format": "^1.0.1",
 		"importx": "^0.5.2",
