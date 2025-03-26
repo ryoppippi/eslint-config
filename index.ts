@@ -74,6 +74,8 @@ export async function ryoppippi(
 		console.warn('tsconfig.json is not found. we cannot use type-aware rules.');
 	}
 
+	const tailwindRules = await tailwind(_options.tailwind);
+
 	return antfu(
 		_options as UserOptions,
 		/** general rules */
@@ -85,7 +87,8 @@ export async function ryoppippi(
 				'antfu/top-level-function': 'error',
 			},
 		},
-		...await tailwind(_options.tailwind),
+		// @ts-expect-error type mismatch
+		...tailwindRules,
 		/* svelte rules */
 		(!_options.svelte)
 			? {}

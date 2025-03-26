@@ -1,15 +1,28 @@
-import type { TypedFlatConfigItem } from '@antfu/eslint-config';
 import { interopDefault } from '@antfu/eslint-config';
 
 /**
  * Tailwind CSS configuration.
  */
-export async function tailwind(enabled: boolean = false): Promise<TypedFlatConfigItem[]> {
-	const tailwind = await interopDefault(import('eslint-plugin-tailwindcss'));
+export async function tailwind(enabled: boolean = false) {
+	const pluginTailwindcss = await interopDefault(import('eslint-plugin-tailwindcss'));
 
-	if (enabled) {
-		// because of type mismatch, we need to cast the return value
-		return tailwind.configs['flat/recommended'] as TypedFlatConfigItem[];
+	if (!enabled) {
+		return [];
 	}
-	return [];
+	return [
+		...pluginTailwindcss.configs['flat/recommended'],
+		{
+			name: 'tailwindcss:rules',
+			rules: {
+				// Disable the rule that enforces the use of custom classnames
+				'tailwindcss/no-custom-classname': 'off',
+			},
+			settings: {
+				tailwindcss: {
+					// These are the default values but feel free to customize
+					callees: ['classnames', 'clsx', 'ctl', 'cn'] as const,
+				},
+			},
+		},
+	];
 }
