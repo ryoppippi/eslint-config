@@ -1,11 +1,11 @@
 # @ryoppippi/eslint-config
 
-[![JSR](https://jsr.io/badges/@ryoppippi/eslint-config)](https://jsr.io/@ryoppippi/eslint-config)
+[![npm version](https://img.shields.io/npm/v/@ryoppippi/eslint-config?color=yellow)](https://npmjs.com/package/@ryoppippi/eslint-config)
 
 ## Installation
 
 ```sh
-npx jsr add @ryoppippi/eslint-config
+pnpm i -D eslint @ryoppippi/eslint-config
 ```
 
 ## Usage
