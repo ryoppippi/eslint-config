@@ -6,7 +6,8 @@
 	"author": "ryoppippi",
 	"license": "MIT",
 	"exports": {
-		".": "./src/index.ts"
+		".": "./src/index.ts",
+		"./next": "./src/next.ts"
 	},
 	"publishConfig": {
 		"access": "public",
