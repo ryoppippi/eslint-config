@@ -13,7 +13,7 @@ export type TailwindOptions = {
 /**
  * Tailwind CSS configuration.
  */
-export async function tailwind(options: TailwindOptions | boolean = {}): Promise<TypedFlatConfigItem[]> {
+export async function tailwind(options: TailwindOptions | boolean = false): Promise<TypedFlatConfigItem[]> {
 	if (options === false) {
 		return [];
 	}
