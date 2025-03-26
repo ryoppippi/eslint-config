@@ -1,7 +1,7 @@
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
-import tailwind from 'eslint-plugin-tailwindcss';
 import { resolveTSConfig } from 'pkg-types';
+import { tailwind } from './tailwindcss';
 
 type UserOptions = Parameters<typeof antfu>[0] & {
 	/**
@@ -85,8 +85,7 @@ export async function ryoppippi(
 				'antfu/top-level-function': 'error',
 			},
 		},
-		// @ts-expect-error type mismatch
-		...((_options.tailwind ?? false) ? tailwind.configs['flat/recommended'] : []),
+		...await tailwind(_options.tailwind),
 		/* svelte rules */
 		(!_options.svelte)
 			? {}
