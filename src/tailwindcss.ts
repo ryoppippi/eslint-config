@@ -1,12 +1,28 @@
 import { interopDefault } from '@antfu/eslint-config';
 
+export type TailwindOptions = {
+/**
+ * Allow only tailwind classes
+ *
+ * @default false
+ */
+	strict?: boolean;
+};
+
 /**
  * Tailwind CSS configuration.
  */
-export async function tailwind(enabled: boolean = false) {
-	if (!enabled) {
+export async function tailwind(options: TailwindOptions | boolean = {}) {
+	if (options === false) {
 		return [];
 	}
+	if (options === true) {
+		options = {};
+	}
+
+	const {
+		strict = false,
+	} = options;
 
 	const pluginTailwindcss = await interopDefault(import('eslint-plugin-tailwindcss'));
 	return [
@@ -15,7 +31,7 @@ export async function tailwind(enabled: boolean = false) {
 			name: 'tailwindcss:rules',
 			rules: {
 				// Disable the rule that enforces the use of custom classnames
-				'tailwindcss/no-custom-classname': 'off',
+				'tailwindcss/no-custom-classname': strict ? 'error' : 'off',
 			},
 			settings: {
 				tailwindcss: {

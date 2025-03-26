@@ -1,3 +1,4 @@
+import type { TailwindOptions } from './tailwindcss';
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
@@ -12,7 +13,7 @@ type UserOptions = Parameters<typeof antfu>[0] & {
 	 *
 	 * @default false
 	 */
-	tailwind?: boolean;
+	tailwind?: boolean | TailwindOptions;
 };
 type UserConfigs = Parameters<typeof antfu>[1];
 type ESLintConfig = ReturnType<typeof antfu>;
