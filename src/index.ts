@@ -1,22 +1,8 @@
-import type { TailwindOptions } from './tailwindcss';
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
 import { tailwind } from './rules';
-
-type UserOptions = Parameters<typeof antfu>[0] & {
-	/**
-	 * Enable tailwind rules.
-	 *
-	 * Requires installing:
-	 * - `eslint-plugin-tailwindcss`
-	 *
-	 * @default false
-	 */
-	tailwind?: boolean | TailwindOptions;
-};
-type UserConfigs = Parameters<typeof antfu>[1];
-type ESLintConfig = ReturnType<typeof antfu>;
+import type { UserOptions, UserConfigs, ESLintConfig } from './options';
 
 // eslint-disable-next-line antfu/no-top-level-await
 const tsconfigPath = await resolveTSConfig().then(path => path).catch(() => undefined);
