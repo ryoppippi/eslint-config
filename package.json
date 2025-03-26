@@ -17,7 +17,7 @@
 			},
 			"./next": {
 				"types": "./dist/next.d.ts",
-				"default": "./dist/next/index.mjs"
+				"default": "./dist/next.mjs"
 			},
 			"./package.json": "./package.json"
 		}
