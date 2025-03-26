@@ -21,6 +21,11 @@ export const ryoppippiNext = (async (options, ...args): Promise<ESLintConfig> =>
 				'antfu/no-top-level-await': 'off', // Allow top-level await
 				'node/prefer-global/process': 'off', // Allow using `process.env`
 				'no-console': 'off', // Allow using `console`
+			},
+		},
+		{
+			files: ['**/*.tsx'],
+			rules: {
 				'ts/no-misused-promises': ['error', {
 					checksVoidReturn: false, // happens error when we pass promises to jsx attributes https://github.com/typescript-eslint/typescript-eslint/issues/4619
 				}],
