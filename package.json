@@ -5,7 +5,19 @@
 	"packageManager": "pnpm@10.6.5",
 	"author": "ryoppippi",
 	"license": "MIT",
-	"exports": "./index.ts",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"publishConfig": {
+		"access": "public",
+		"exports": {
+			".": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.mjs"
+			},
+			"./package.json": "./package.json"
+		}
+	},
 	"scripts": {
 		"dev": "nlx @eslint/config-inspector",
 		"lint": "eslint .",
