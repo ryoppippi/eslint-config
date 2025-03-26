@@ -20,10 +20,11 @@
 	},
 	"scripts": {
 		"dev": "nlx @eslint/config-inspector",
-		"lint": "eslint .",
-		"format": "nr lint --fix",
-		"release": "nr lint && nlx bumpp",
-		"jsr": "nlx pkg-to-jsr && nlx jsr publish"
+		"lint": "pnpm /^lint:/",
+		"lint:eslint": "eslint .",
+		"lint:publint": "eslint .",
+		"format": "nr lint:eslint --fix",
+		"release": "nr lint && nlx bumpp"
 	},
 	"peerDependencies": {
 		"eslint-plugin-tailwindcss": "^3.18.0"
