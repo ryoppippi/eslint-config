@@ -31,7 +31,8 @@
 		"lint:publint": "eslint .",
 		"format": "nr lint:eslint --fix",
 		"prepack": "nr build && clean-pkg-json",
-		"release": "nr lint && nlx bumpp && pnpm publish"
+		"release": "nr lint && nlx bumpp && pnpm publish",
+		"prepare": "husky"
 	},
 	"peerDependencies": {
 		"@next/eslint-plugin-next": "^15.2.4",
@@ -59,13 +60,20 @@
 		"clean-pkg-json": "^1.2.1",
 		"eslint": "^9.23.0",
 		"eslint-plugin-format": "^1.0.1",
+		"husky": "^9.1.7",
 		"importx": "^0.5.2",
+		"lint-staged": "^15.5.0",
 		"typescript": "^5.8.2",
 		"unbuild": "^3.5.0"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
 			"esbuild"
+		]
+	},
+	"lint-staged": {
+		"*": [
+			"eslint --fix"
 		]
 	}
 }
