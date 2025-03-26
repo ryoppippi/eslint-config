@@ -2,7 +2,7 @@ import type { TailwindOptions } from './tailwindcss';
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
-import { tailwind } from './tailwindcss';
+import { tailwind } from './rules';
 
 type UserOptions = Parameters<typeof antfu>[0] & {
 	/**
