@@ -20,11 +20,13 @@
 	},
 	"scripts": {
 		"dev": "nlx @eslint/config-inspector",
+		"build": "unbuild",
 		"lint": "pnpm /^lint:/",
 		"lint:eslint": "eslint .",
 		"lint:publint": "eslint .",
 		"format": "nr lint:eslint --fix",
-		"release": "nr lint && nlx bumpp"
+		"release": "nr lint && nlx bumpp",
+		"prepack": "nr build"
 	},
 	"peerDependencies": {
 		"eslint-plugin-tailwindcss": "^3.18.0"
@@ -45,7 +47,8 @@
 		"eslint": "^9.23.0",
 		"eslint-plugin-format": "^1.0.1",
 		"importx": "^0.5.2",
-		"typescript": "^5.8.2"
+		"typescript": "^5.8.2",
+		"unbuild": "^3.5.0"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
