@@ -1,8 +1,8 @@
+import type { ESLintConfig, UserConfigs, UserOptions } from './options';
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
-import { tailwind } from './rules';
-import type { UserOptions, UserConfigs, ESLintConfig } from './options';
+import { next, tailwind } from './rules';
 
 // eslint-disable-next-line antfu/no-top-level-await
 const tsconfigPath = await resolveTSConfig().then(path => path).catch(() => undefined);
@@ -62,6 +62,7 @@ export async function ryoppippi(
 	}
 
 	const tailwindRules = await tailwind(_options.tailwind);
+	const nextJsRules = await next(_options.next);
 
 	return antfu(
 		_options as UserOptions,
@@ -76,6 +77,7 @@ export async function ryoppippi(
 		},
 		// @ts-expect-error type mismatch
 		...tailwindRules,
+		...nextJsRules,
 		/* svelte rules */
 		(!_options.svelte)
 			? {}
