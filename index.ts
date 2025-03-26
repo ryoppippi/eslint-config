@@ -1,8 +1,19 @@
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
+import { tailwind } from './tailwindcss';
 
-type UserOptions = Parameters<typeof antfu>[0];
+type UserOptions = Parameters<typeof antfu>[0] & {
+	/**
+	 * Enable tailwind rules.
+	 *
+	 * Requires installing:
+	 * - `eslint-plugin-tailwindcss`
+	 *
+	 * @default false
+	 */
+	tailwind?: boolean;
+};
 type UserConfigs = Parameters<typeof antfu>[1];
 type ESLintConfig = ReturnType<typeof antfu>;
 
@@ -60,7 +71,7 @@ export async function ryoppippi(
 	);
 
 	if (typeof _options.typescript !== 'boolean' && _options?.typescript?.tsconfigPath == null) {
-		console.warn('tsconfig.json is not found.');
+		console.warn('tsconfig.json is not found. we cannot use type-aware rules.');
 	}
 
 	return antfu(
@@ -74,6 +85,7 @@ export async function ryoppippi(
 				'antfu/top-level-function': 'error',
 			},
 		},
+		...await tailwind(_options.tailwind),
 		/* svelte rules */
 		(!_options.svelte)
 			? {}
