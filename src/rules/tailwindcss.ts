@@ -1,3 +1,4 @@
+import type { TypedFlatConfigItem } from '@antfu/eslint-config';
 import { interopDefault } from '@antfu/eslint-config';
 
 export type TailwindOptions = {
@@ -12,7 +13,7 @@ export type TailwindOptions = {
 /**
  * Tailwind CSS configuration.
  */
-export async function tailwind(options: TailwindOptions | boolean = {}) {
+export async function tailwind(options: TailwindOptions | boolean = {}): Promise<TypedFlatConfigItem[]> {
 	if (options === false) {
 		return [];
 	}
@@ -26,7 +27,7 @@ export async function tailwind(options: TailwindOptions | boolean = {}) {
 
 	const pluginTailwindcss = await interopDefault(import('eslint-plugin-tailwindcss'));
 	return [
-		...pluginTailwindcss.configs['flat/recommended'],
+		...pluginTailwindcss.configs['flat/recommended'] as TypedFlatConfigItem[],
 		{
 			name: 'tailwindcss:rules',
 			rules: {

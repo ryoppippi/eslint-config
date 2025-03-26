@@ -1,22 +1,8 @@
-import type { TailwindOptions } from './tailwindcss';
+import type { ESLintConfig, UserConfigs, UserOptions } from './options';
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
-import { tailwind } from './tailwindcss';
-
-type UserOptions = Parameters<typeof antfu>[0] & {
-	/**
-	 * Enable tailwind rules.
-	 *
-	 * Requires installing:
-	 * - `eslint-plugin-tailwindcss`
-	 *
-	 * @default false
-	 */
-	tailwind?: boolean | TailwindOptions;
-};
-type UserConfigs = Parameters<typeof antfu>[1];
-type ESLintConfig = ReturnType<typeof antfu>;
+import { next, tailwind } from './rules';
 
 // eslint-disable-next-line antfu/no-top-level-await
 const tsconfigPath = await resolveTSConfig().then(path => path).catch(() => undefined);
@@ -76,6 +62,7 @@ export async function ryoppippi(
 	}
 
 	const tailwindRules = await tailwind(_options.tailwind);
+	const nextJsRules = await next(_options.next);
 
 	return antfu(
 		_options as UserOptions,
@@ -90,6 +77,7 @@ export async function ryoppippi(
 		},
 		// @ts-expect-error type mismatch
 		...tailwindRules,
+		...nextJsRules,
 		/* svelte rules */
 		(!_options.svelte)
 			? {}
