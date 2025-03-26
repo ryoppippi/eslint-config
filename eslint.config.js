@@ -5,6 +5,7 @@ const { ryoppippi } = await importx('@ryoppippi/eslint-config', import.meta.url)
 
 export default ryoppippi({
 	svelte: false,
+	tailwind: true,
 	typescript: {
 		tsconfigPath: './tsconfig.json',
 	},
