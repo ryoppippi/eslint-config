@@ -4,9 +4,6 @@ import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
 import { next, tailwindCss } from './rules';
 
-// eslint-disable-next-line antfu/no-top-level-await
-const tsconfigPath = await resolveTSConfig().then(path => path).catch(() => undefined);
-
 /**
  * @ryoppippi's ESLint configuration.
  *
@@ -22,6 +19,8 @@ export async function ryoppippi(
 	options: UserOptions,
 	...args: UserConfigs[ ]
 ): Promise<ESLintConfig> {
+	const tsconfigPath = await resolveTSConfig().catch(() => undefined);
+
 	const _options = defu(
 		options,
 		{
