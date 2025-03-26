@@ -2,7 +2,7 @@ import type { ESLintConfig, UserConfigs, UserOptions } from './options';
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
-import { next, tailwind } from './rules';
+import { next, tailwindCss } from './rules';
 
 // eslint-disable-next-line antfu/no-top-level-await
 const tsconfigPath = await resolveTSConfig().then(path => path).catch(() => undefined);
@@ -61,7 +61,7 @@ export async function ryoppippi(
 		console.warn('tsconfig.json is not found. we cannot use type-aware rules.');
 	}
 
-	const tailwindRules = await tailwind(_options.tailwind);
+	const tailwindRules = await tailwindCss(_options.tailwindcss);
 	const nextJsRules = await next(_options.next);
 
 	return antfu(
@@ -75,7 +75,6 @@ export async function ryoppippi(
 				'antfu/top-level-function': 'error',
 			},
 		},
-		// @ts-expect-error type mismatch
 		...tailwindRules,
 		...nextJsRules,
 		/* svelte rules */

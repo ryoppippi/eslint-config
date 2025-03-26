@@ -10,7 +10,7 @@ export const ryoppippiNext = (async (options, ...args): Promise<ESLintConfig> =>
 			next: true,
 			react: true,
 			svelte: false,
-			tailwind: { strict: true },
+			tailwindcss: { strict: true },
 		} as const satisfies UserOptions,
 	);
 

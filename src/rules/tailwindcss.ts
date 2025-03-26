@@ -1,7 +1,7 @@
 import type { TypedFlatConfigItem } from '@antfu/eslint-config';
 import { interopDefault } from '@antfu/eslint-config';
 
-export type TailwindOptions = {
+export type TailwindCssOptions = {
 /**
  * Allow only tailwind classes
  *
@@ -13,7 +13,7 @@ export type TailwindOptions = {
 /**
  * Tailwind CSS configuration.
  */
-export async function tailwind(options: TailwindOptions | boolean = false): Promise<TypedFlatConfigItem[]> {
+export async function tailwindCss(options: TailwindCssOptions | boolean = false): Promise<TypedFlatConfigItem[]> {
 	if (options === false) {
 		return [];
 	}

@@ -1,5 +1,5 @@
 import type antfu from '@antfu/eslint-config';
-import type { TailwindOptions } from './rules';
+import type { TailwindCssOptions } from './rules';
 
 export type UserOptions = Parameters<typeof antfu>[0] & {
 	/**
@@ -10,7 +10,7 @@ export type UserOptions = Parameters<typeof antfu>[0] & {
 	 *
 	 * @default false
 	 */
-	tailwind?: boolean | TailwindOptions;
+	tailwindcss?: boolean | TailwindCssOptions;
 
 	/**
 	 * Enable next.js rules.
