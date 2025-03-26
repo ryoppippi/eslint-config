@@ -23,11 +23,7 @@
 		"noUnusedParameters": false,
 		"noEmit": true,
 		"verbatimModuleSyntax": true,
-		"skipLibCheck": true,
-		"plugins": [
-			{
-				"transform": "typia/lib/transform"
-			}
-		]
-	}
+		"skipLibCheck": true
+	},
+	"src": ["src"]
 }
