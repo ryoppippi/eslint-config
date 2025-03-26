@@ -15,6 +15,10 @@
 				"types": "./dist/index.d.ts",
 				"default": "./dist/index.mjs"
 			},
+			"./next": {
+				"types": "./dist/next.d.ts",
+				"default": "./dist/next/index.mjs"
+			},
 			"./package.json": "./package.json"
 		}
 	},
@@ -29,6 +33,7 @@
 		"release": "nr lint && nlx bumpp && pnpm publish"
 	},
 	"peerDependencies": {
+		"eslint": ">= 9.0.0",
 		"@next/eslint-plugin-next": "^15.2.4",
 		"eslint-plugin-tailwindcss": "^3.18.0"
 	},
@@ -44,6 +49,7 @@
 		"@antfu/eslint-config": "^4.11.0",
 		"@antfu/ni": "^24.3.0",
 		"defu": "^6.1.4",
+		"eslint-flat-config-utils": "^2.0.1",
 		"pkg-types": "^2.1.0"
 	},
 	"devDependencies": {
