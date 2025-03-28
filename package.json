@@ -28,7 +28,7 @@
 		"build": "unbuild",
 		"lint": "pnpm /^lint:/",
 		"lint:eslint": "eslint .",
-		"lint:publint": "eslint .",
+		"lint:publint": "publint",
 		"format": "nr lint:eslint --fix",
 		"prepack": "nr build && clean-pkg-json",
 		"release": "nr lint && nlx bumpp && pnpm publish",
@@ -73,6 +73,7 @@
 		"husky": "^9.1.7",
 		"importx": "^0.5.2",
 		"lint-staged": "^15.5.0",
+		"publint": "^0.3.9",
 		"typescript": "^5.8.2",
 		"unbuild": "^3.5.0"
 	},
