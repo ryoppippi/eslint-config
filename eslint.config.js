@@ -7,6 +7,7 @@ export default ryoppippi({
 	svelte: false,
 	tailwind: true,
 	tanstackQuery: true,
+	tanstackRouter: true,
 	typescript: {
 		tsconfigPath: './tsconfig.json',
 	},
