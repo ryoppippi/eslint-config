@@ -68,6 +68,7 @@
 		"@antfu/ni": "^24.3.0",
 		"defu": "^6.1.4",
 		"eslint-flat-config-utils": "^2.0.1",
+		"eslint-plugin-ryoppippi": "^0.2.2",
 		"pkg-types": "^2.1.0"
 	},
 	"devDependencies": {
