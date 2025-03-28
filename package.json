@@ -23,6 +23,9 @@
 			"./package.json": "./package.json"
 		}
 	},
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"dev": "nlx @eslint/config-inspector",
 		"build": "unbuild",
