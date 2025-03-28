@@ -37,6 +37,7 @@
 		"lint": "pnpm /^lint:/",
 		"lint:eslint": "eslint .",
 		"lint:publint": "publint",
+		"lint:typecheck": "tsc --noEmit",
 		"format": "nr lint:eslint --fix",
 		"prepack": "nr build && clean-pkg-json",
 		"release": "nr lint && nlx bumpp && pnpm publish",
