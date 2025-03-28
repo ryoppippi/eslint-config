@@ -21,6 +21,16 @@ export type UserOptions = Parameters<typeof antfu>[0] & {
 	 * @default false
 	 */
 	next?: boolean;
+
+	/**
+	 * Enable tanstackQuery rules.
+	 *
+	 * Requires installing:
+	 * - `@tanstack/eslint-plugin-tanstackQuery`
+	 *
+	 * @default false
+	 */
+	tanstackQuery?: boolean;
 };
 export type UserConfigs = Parameters<typeof antfu>[1];
 export type ESLintConfig = ReturnType<typeof antfu>;

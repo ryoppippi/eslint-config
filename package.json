@@ -36,11 +36,15 @@
 	},
 	"peerDependencies": {
 		"@next/eslint-plugin-next": "^15.2.4",
+		"@tanstack/eslint-plugin-query": ">= 4",
 		"eslint": ">= 9.23.0",
 		"eslint-plugin-tailwindcss": "^3.18.0"
 	},
 	"peerDependenciesMeta": {
 		"@next/eslint-plugin-next": {
+			"optional": true
+		},
+		"@tanstack/eslint-plugin-query": {
 			"optional": true
 		},
 		"eslint-plugin-tailwindcss": {
@@ -56,6 +60,7 @@
 	},
 	"devDependencies": {
 		"@next/eslint-plugin-next": "^15.2.4",
+		"@tanstack/eslint-plugin-query": "^5.68.0",
 		"@types/eslint-plugin-tailwindcss": "^3.17.0",
 		"clean-pkg-json": "^1.2.1",
 		"eslint": "^9.23.0",
