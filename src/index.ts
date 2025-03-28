@@ -2,7 +2,7 @@ import type { ESLintConfig, UserConfigs, UserOptions } from './options';
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
-import { next, tailwindCss, tanstackQuery } from './rules';
+import { next, tailwindCss, tanstackQuery, tanstackRouter } from './rules';
 
 /**
  * @ryoppippi's ESLint configuration.
@@ -63,6 +63,7 @@ export async function ryoppippi(
 	const tailwindRules = await tailwindCss(_options.tailwindcss);
 	const nextJsRules = await next(_options.next);
 	const tanstackQueryRules = await tanstackQuery(_options.tanstackQuery);
+	const tanstackRouterRules = await tanstackRouter(_options.tanstackRouter);
 
 	return antfu(
 		_options as UserOptions,
@@ -78,6 +79,7 @@ export async function ryoppippi(
 		...tailwindRules,
 		...nextJsRules,
 		...tanstackQueryRules,
+		...tanstackRouterRules,
 		/* svelte rules */
 		(!_options.svelte)
 			? {}
