@@ -5,6 +5,11 @@
 	"packageManager": "pnpm@10.6.5",
 	"author": "ryoppippi",
 	"license": "MIT",
+	"funding": "https://github.com/sponsors/ryoppippi",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ryoppippi/eslint-config.git"
+	},
 	"exports": {
 		".": "./src/index.ts",
 		"./next": "./src/next.ts"
