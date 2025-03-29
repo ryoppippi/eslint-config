@@ -1,6 +1,6 @@
-import type { ryoppippi as baseRyoppippi } from './index';
 import type { ESLintConfig, UserOptions } from './options';
 import { defu } from 'defu';
+import { ryoppippi as baseRyoppippi } from './index';
 
 export const ryoppippi = (async (options, ...args): Promise<ESLintConfig> => {
 	const _options = defu(
@@ -14,7 +14,7 @@ export const ryoppippi = (async (options, ...args): Promise<ESLintConfig> => {
 		} as const satisfies UserOptions,
 	);
 
-	return ryoppippi(
+	return baseRyoppippi(
 		_options,
 		{
 			rules: {
