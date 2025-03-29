@@ -8,7 +8,7 @@ type TanstackStartOptions = {
 	/**
 	 * The directory where the app is located
 	 *
-	 * @default 'app'
+	 * @default './app'
 	 */
 	appDirectory?: string;
 } & UserOptions;
@@ -27,7 +27,7 @@ export const ryoppippi = (async (
 			tailwindcss: { strict: true },
 			tanstackQuery: true,
 			tanstackRouter: true,
-			appDirectory: 'app',
+			appDirectory: './app',
 		} as const satisfies TanstackStartOptions,
 	);
 
