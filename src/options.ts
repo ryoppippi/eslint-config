@@ -1,5 +1,5 @@
 import type antfu from '@antfu/eslint-config';
-import type { TailwindCssOptions } from './rules';
+import type { TailwindCssOptions, TanstackStartOptions } from './rules';
 
 export type UserOptions = Parameters<typeof antfu>[0] & {
 	/**
@@ -41,6 +41,16 @@ export type UserOptions = Parameters<typeof antfu>[0] & {
 	 * @default false
 	 */
 	tanstackRouter?: boolean;
+
+	/**
+	 * Enable tanstackStart rules.
+	 *
+	 * This auto enabled `@tanstack/eslint-plugin-router` and `@tanstack/eslint-plugin-tanstackQuery`
+	 * If you want to disable them, you can set `tanstackQuery` and `tanstackRouter` to `false`
+	 *
+	 * @default false
+	 */
+	tanstackStart?: boolean | TanstackStartOptions;
 };
 export type UserConfigs = Parameters<typeof antfu>[1];
 export type ESLintConfig = ReturnType<typeof antfu>;
