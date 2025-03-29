@@ -57,7 +57,7 @@ export const ryoppippi = (async (
 			},
 		},
 		{
-			files: [`${appDirectory}/routeTree.gen.ts`],
+			files: [`**/routeTree.gen.ts`],
 			rules: {
 				'eslint-comments/no-unlimited-disable': 'off', // routeTree.gen.ts is generated file
 			},
