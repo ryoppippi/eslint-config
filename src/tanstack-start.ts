@@ -41,18 +41,26 @@ export const ryoppippi = (async (
 			},
 		},
 		{
-			files: ['**/*.tsx'],
-			rules: {
-				'ts/no-misused-promises': ['error', {
-					checksVoidReturn: false, // happens error when we pass promises to jsx attributes https://github.com/typescript-eslint/typescript-eslint/issues/4619
-				}],
-			},
 			ignores: [
 				`${appDirectory}/client.tsx`,
 				`${appDirectory}/ssr.tsx`,
 				`${appDirectory}/router.tsx`,
 				`${appDirectory}/routeTree.gen.ts`,
 			],
+		},
+		{
+			files: ['**/*.tsx'],
+			rules: {
+				'ts/no-misused-promises': ['error', {
+					checksVoidReturn: false, // happens error when we pass promises to jsx attributes https://github.com/typescript-eslint/typescript-eslint/issues/4619
+				}],
+			},
+		},
+		{
+			files: [`${appDirectory}/routeTree.gen.ts`],
+			rules: {
+				'eslint-comments/no-unlimited-disable': 'off', // routeTree.gen.ts is generated file
+			},
 		},
 		...args,
 	);
