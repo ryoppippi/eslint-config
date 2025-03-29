@@ -1,8 +1,8 @@
 import type { ESLintConfig, UserConfigs } from './options';
 import { defu } from 'defu';
-import { ryoppippi } from './index';
+import { ryoppippi as baseRyoppippi } from './index';
 
-type UserOptions = Parameters<typeof ryoppippi>[0];
+type UserOptions = Parameters<typeof baseRyoppippi>[0];
 
 type TanstackStartOptions = {
 	/**
@@ -13,7 +13,7 @@ type TanstackStartOptions = {
 	appDirectory?: string;
 } & UserOptions;
 
-export const ryoppippiTanstackRouter = (async (
+export const ryoppippi = (async (
 	options: TanstackStartOptions,
 	...args: UserConfigs[]
 ): Promise<ESLintConfig> => {
@@ -33,7 +33,7 @@ export const ryoppippiTanstackRouter = (async (
 
 	const { appDirectory } = _options;
 
-	return ryoppippi(
+	return baseRyoppippi(
 		_options,
 		{
 			rules: {
@@ -56,4 +56,4 @@ export const ryoppippiTanstackRouter = (async (
 		},
 		...args,
 	);
-}) satisfies typeof ryoppippi;
+}) satisfies typeof baseRyoppippi;
