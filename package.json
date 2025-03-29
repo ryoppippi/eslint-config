@@ -46,7 +46,7 @@
 	"peerDependencies": {
 		"@next/eslint-plugin-next": "^15.2.4",
 		"@tanstack/eslint-plugin-query": ">= 5.68.0",
-		"@tanstack/eslint-plugin-router": ">= 1",
+		"@tanstack/eslint-plugin-router": ">= 1.114.12",
 		"eslint": ">= 9.23.0",
 		"eslint-plugin-tailwindcss": "^3.18.0"
 	},
