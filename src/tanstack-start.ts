@@ -57,6 +57,7 @@ export const ryoppippi = (async (
 			},
 		},
 		{
+			name: 'ryoppippi/tanstack-start/disable-eslint-for-routeTree.gen.ts',
 			files: [`**/routeTree.gen.ts`],
 			rules: {
 				'eslint-comments/no-unlimited-disable': 'off', // routeTree.gen.ts is generated file
