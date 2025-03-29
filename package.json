@@ -12,7 +12,8 @@
 	},
 	"exports": {
 		".": "./src/index.ts",
-		"./next": "./src/next.ts"
+		"./next": "./src/next.ts",
+		"./tanstack-start": "./src/tanstack-start.ts"
 	},
 	"publishConfig": {
 		"access": "public",
@@ -24,6 +25,10 @@
 			"./next": {
 				"types": "./dist/next.d.ts",
 				"default": "./dist/next.mjs"
+			},
+			"./tanstack-start": {
+				"types": "./dist/tanstack-start.d.ts",
+				"default": "./dist/tanstack-start.mjs"
 			},
 			"./package.json": "./package.json"
 		}

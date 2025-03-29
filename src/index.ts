@@ -2,7 +2,7 @@ import type { ESLintConfig, UserConfigs, UserOptions } from './options';
 import antfu from '@antfu/eslint-config';
 import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
-import { next, ryoppippi as ryoppippiRules, tailwindCss, tanstackQuery, tanstackRouter, tanstackStart } from './rules';
+import { next, ryoppippi as ryoppippiRules, tailwindCss, tanstackQuery, tanstackRouter } from './rules';
 
 /**
  * @ryoppippi's ESLint configuration.
@@ -60,15 +60,10 @@ export async function ryoppippi(
 		console.warn('tsconfig.json is not found. we cannot use type-aware rules.');
 	}
 
-	const enabledTanstackStart = _options.tanstackStart !== false;
-	const enableTanstackRouter = enabledTanstackStart && _options.tanstackRouter !== false;
-	const enableTanstackQuery = enabledTanstackStart && _options.tanstackQuery !== false;
-
 	const tailwindRules = await tailwindCss(_options.tailwindcss);
 	const nextJsRules = await next(_options.next);
-	const tanstackStartRules = await tanstackStart(_options.tanstackStart);
-	const tanstackQueryRules = await tanstackQuery(enableTanstackQuery);
-	const tanstackRouterRules = await tanstackRouter(enableTanstackRouter);
+	const tanstackQueryRules = await tanstackQuery(_options.tanstackQuery);
+	const tanstackRouterRules = await tanstackRouter(_options.tanstackRouter);
 	const pluginRyoppippi = await ryoppippiRules(true);
 
 	return antfu(
@@ -87,7 +82,6 @@ export async function ryoppippi(
 		...nextJsRules,
 		...tanstackQueryRules,
 		...tanstackRouterRules,
-		...tanstackStartRules,
 		/* svelte rules */
 		(!_options.svelte)
 			? {}
