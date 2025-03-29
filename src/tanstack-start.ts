@@ -21,7 +21,7 @@ export const ryoppippiTanstackRouter = (async (
 		options,
 		{
 			type: 'app',
-			next: true,
+			next: false,
 			react: true,
 			svelte: false,
 			tailwindcss: { strict: true },
