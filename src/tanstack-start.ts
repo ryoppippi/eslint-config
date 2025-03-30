@@ -63,6 +63,21 @@ export const ryoppippi = (async (
 				'eslint-comments/no-unlimited-disable': 'off', // routeTree.gen.ts is generated file
 			},
 		},
+		{
+			name: 'ryoppippi/tanstack-start/disable-eslint-for-router.tsx',
+			files: [`**/${appDirectory}/router.tsx`],
+			rules: {
+				'ts/consistent-type-definitions': 'off',
+			},
+		},
+		{
+			name: 'ryoppippi/tanstack-start/disable-eslint-for-ssr.tsx',
+			files: [`**/${appDirectory}/ssr.tsx`],
+			rules: {
+				'react-refresh/only-export-components': 'off',
+				'ts/no-unsafe-argument': 'off', // happens on `defaultStreamHandler`
+			},
+		},
 		...args,
 	);
 }) satisfies typeof baseRyoppippi;
