@@ -42,14 +42,6 @@ export const ryoppippi = (async (
 			},
 		},
 		{
-			files: ['**/*.tsx'],
-			rules: {
-				'ts/no-misused-promises': ['error', {
-					checksVoidReturn: false, // happens error when we pass promises to jsx attributes https://github.com/typescript-eslint/typescript-eslint/issues/4619
-				}],
-			},
-		},
-		{
 			name: 'ryoppippi/tanstack-start/disable-eslint-for-routeTree.gen.ts',
 			files: [join('**', appDirectory, 'routeTree.gen.ts')],
 			rules: {
