@@ -71,12 +71,12 @@
 	},
 	"dependencies": {
 		"@antfu/eslint-config": "^4.11.0",
-		"@antfu/ni": "^24.3.0",
 		"eslint-flat-config-utils": "^2.0.1",
 		"eslint-plugin-ryoppippi": "^0.2.2",
 		"pkg-types": "^2.1.0"
 	},
 	"devDependencies": {
+		"@antfu/ni": "^24.3.0",
 		"@next/eslint-plugin-next": "^15.2.4",
 		"@tanstack/eslint-plugin-query": "^5.68.0",
 		"@tanstack/eslint-plugin-router": "^1.114.29",
