@@ -72,7 +72,6 @@
 	"dependencies": {
 		"@antfu/eslint-config": "^4.11.0",
 		"@antfu/ni": "^24.3.0",
-		"defu": "^6.1.4",
 		"eslint-flat-config-utils": "^2.0.1",
 		"eslint-plugin-ryoppippi": "^0.2.2",
 		"pkg-types": "^2.1.0"
@@ -84,6 +83,7 @@
 		"@types/eslint-plugin-tailwindcss": "^3.17.0",
 		"@types/node": "^22.13.14",
 		"clean-pkg-json": "^1.2.1",
+		"defu": "^6.1.4",
 		"eslint": "^9.23.0",
 		"eslint-plugin-format": "^1.0.1",
 		"husky": "^9.1.7",
