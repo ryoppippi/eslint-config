@@ -1,5 +1,6 @@
 import type { ESLintConfig, UserConfigs } from './options';
 import { defu } from 'defu';
+import { join } from 'pathe';
 import { ryoppippi as baseRyoppippi } from './index';
 
 type UserOptions = Parameters<typeof baseRyoppippi>[0];
@@ -50,21 +51,21 @@ export const ryoppippi = (async (
 		},
 		{
 			name: 'ryoppippi/tanstack-start/disable-eslint-for-routeTree.gen.ts',
-			files: [`**/${appDirectory}/routeTree.gen.ts`],
+			files: [join('**', appDirectory, 'routeTree.gen.ts')],
 			rules: {
 				'eslint-comments/no-unlimited-disable': 'off', // routeTree.gen.ts is generated file
 			},
 		},
 		{
 			name: 'ryoppippi/tanstack-start/disable-eslint-for-router.tsx',
-			files: [`**/${appDirectory}/router.tsx`],
+			files: [join('**', appDirectory, 'router.tsx')],
 			rules: {
 				'ts/consistent-type-definitions': 'off',
 			},
 		},
 		{
 			name: 'ryoppippi/tanstack-start/disable-eslint-for-ssr.tsx',
-			files: [`**/${appDirectory}/ssr.tsx`],
+			files: [join('**', appDirectory, 'ssr.tsx')],
 			rules: {
 				'react-refresh/only-export-components': 'off',
 				'ts/no-unsafe-argument': 'off', // happens on `defaultStreamHandler`
