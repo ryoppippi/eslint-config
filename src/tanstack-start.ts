@@ -41,14 +41,6 @@ export const ryoppippi = (async (
 			},
 		},
 		{
-			ignores: [
-				`${appDirectory}/client.tsx`,
-				`${appDirectory}/ssr.tsx`,
-				`${appDirectory}/router.tsx`,
-				`${appDirectory}/routeTree.gen.ts`,
-			],
-		},
-		{
 			files: ['**/*.tsx'],
 			rules: {
 				'ts/no-misused-promises': ['error', {
