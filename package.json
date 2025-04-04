@@ -89,7 +89,7 @@
 		"eslint-plugin-format": "^1.0.1",
 		"eslint-plugin-react-hooks": "^5.2.0",
 		"eslint-plugin-react-refresh": "^0.4.19",
-		"eslint-plugin-svelte": "^3.4.0",
+		"eslint-plugin-svelte": "^3.4.1",
 		"husky": "^9.1.7",
 		"importx": "^0.5.2",
 		"lint-staged": "^15.5.0",
