@@ -43,7 +43,7 @@ importers:
         specifier: ^3.17.0
         version: 3.17.0
       '@types/node':
-        specifier: ^22.13.17
+        specifier: ^22.14.0
         version: 22.14.0
       clean-pkg-json:
         specifier: ^1.2.1
