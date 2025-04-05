@@ -82,7 +82,7 @@
 		"@tanstack/eslint-plugin-query": "^5.68.0",
 		"@tanstack/eslint-plugin-router": "^1.114.29",
 		"@types/eslint-plugin-tailwindcss": "^3.17.0",
-		"@types/node": "^22.13.16",
+		"@types/node": "^22.13.17",
 		"clean-pkg-json": "^1.2.1",
 		"defu": "^6.1.4",
 		"eslint": "^9.23.0",
