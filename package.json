@@ -52,7 +52,7 @@
 		"@next/eslint-plugin-next": "^15.2.4",
 		"@tanstack/eslint-plugin-query": ">= 5.71.5",
 		"@tanstack/eslint-plugin-router": ">= 1.114.29",
-		"eslint": ">= 9.23.0",
+		"eslint": ">= 9.24.0",
 		"eslint-plugin-tailwindcss": "^3.18.0"
 	},
 	"peerDependenciesMeta": {
@@ -85,7 +85,7 @@
 		"@types/node": "^22.14.0",
 		"clean-pkg-json": "^1.2.1",
 		"defu": "^6.1.4",
-		"eslint": "^9.23.0",
+		"eslint": "^9.24.0",
 		"eslint-plugin-format": "^1.0.1",
 		"eslint-plugin-react-hooks": "^5.2.0",
 		"eslint-plugin-react-refresh": "^0.4.19",
