@@ -46,7 +46,7 @@
 		"format": "nr lint:eslint --fix",
 		"prepack": "nr build && clean-pkg-json",
 		"release": "nr lint && nlx bumpp && pnpm publish",
-		"prepare": "husky"
+		"prepare": "simple-git-hooks"
 	},
 	"peerDependencies": {
 		"@next/eslint-plugin-next": "^15.2.4",
@@ -90,19 +90,23 @@
 		"eslint-plugin-react-hooks": "^5.2.0",
 		"eslint-plugin-react-refresh": "^0.4.19",
 		"eslint-plugin-svelte": "^3.5.1",
-		"husky": "^9.1.7",
 		"importx": "^0.5.2",
 		"lint-staged": "^15.5.0",
 		"pathe": "^2.0.3",
 		"publint": "^0.3.10",
+		"simple-git-hooks": "^2.12.1",
 		"svelte": "^5.25.6",
 		"typescript": "^5.8.3",
 		"unbuild": "^3.5.0"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
-			"esbuild"
+			"esbuild",
+			"simple-git-hooks"
 		]
+	},
+	"simple-git-hooks": {
+		"pre-commit": "pnpm lint-staged"
 	},
 	"lint-staged": {
 		"*": [
