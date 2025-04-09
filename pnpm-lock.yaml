@@ -37,7 +37,7 @@ importers:
         specifier: ^5.71.5
         version: 5.71.5(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)
       '@tanstack/eslint-plugin-router':
-        specifier: ^1.114.29
+        specifier: ^1.115.0
         version: 1.115.0(eslint@9.24.0(jiti@2.4.2))(typescript@5.8.3)
       '@types/eslint-plugin-tailwindcss':
         specifier: ^3.17.0
