@@ -93,7 +93,7 @@
 		"importx": "^0.5.2",
 		"lint-staged": "^15.5.0",
 		"pathe": "^2.0.3",
-		"publint": "^0.3.10",
+		"publint": "^0.3.11",
 		"simple-git-hooks": "^2.12.1",
 		"svelte": "^5.25.10",
 		"typescript": "^5.8.3",
