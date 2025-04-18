@@ -28,7 +28,7 @@ importers:
         specifier: ^24.3.0
         version: 24.3.0
       '@eslint-react/eslint-plugin':
-        specifier: ^1.47.3
+        specifier: ^1.47.4
         version: 1.47.4(eslint@9.24.0(jiti@2.4.2))(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3)
       '@next/eslint-plugin-next':
         specifier: ^15.3.0
