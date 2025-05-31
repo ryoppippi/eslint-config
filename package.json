@@ -91,7 +91,7 @@
 		"eslint-plugin-react-refresh": "^0.4.20",
 		"eslint-plugin-svelte": "^3.9.0",
 		"importx": "^0.5.2",
-		"lint-staged": "^16.0.0",
+		"lint-staged": "^16.1.0",
 		"pathe": "^2.0.3",
 		"publint": "^0.3.12",
 		"simple-git-hooks": "^2.13.0",
