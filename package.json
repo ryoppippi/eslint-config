@@ -2,7 +2,7 @@
 	"name": "@ryoppippi/eslint-config",
 	"type": "module",
 	"version": "0.3.7",
-	"packageManager": "pnpm@10.11.0",
+	"packageManager": "pnpm@10.11.1",
 	"author": "ryoppippi",
 	"license": "MIT",
 	"funding": "https://github.com/sponsors/ryoppippi",
