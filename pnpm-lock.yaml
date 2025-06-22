@@ -82,7 +82,7 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0
       svelte:
-        specifier: ^5.34.5
+        specifier: ^5.34.6
         version: 5.34.7
       typescript:
         specifier: ^5.8.3
