@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@antfu/eslint-config':
         specifier: ^4.11.0
-        version: 4.11.0(@eslint-react/eslint-plugin@1.52.2(eslint@9.30.1(jiti@2.4.2))(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3))(@typescript-eslint/utils@8.34.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.20(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-svelte@3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.34.9))(eslint@9.30.1(jiti@2.4.2))(svelte-eslint-parser@1.2.0(svelte@5.34.9))(typescript@5.8.3)
+        version: 4.11.0(@eslint-react/eslint-plugin@1.52.2(eslint@9.30.1(jiti@2.4.2))(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3))(@typescript-eslint/utils@8.34.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.20(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-svelte@3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.35.2))(eslint@9.30.1(jiti@2.4.2))(svelte-eslint-parser@1.2.0(svelte@5.35.2))(typescript@5.8.3)
       eslint-flat-config-utils:
         specifier: ^2.1.0
         version: 2.1.0
@@ -65,7 +65,7 @@ importers:
         version: 0.4.20(eslint@9.30.1(jiti@2.4.2))
       eslint-plugin-svelte:
         specifier: ^3.10.1
-        version: 3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.34.9)
+        version: 3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.35.2)
       importx:
         specifier: ^0.5.2
         version: 0.5.2
@@ -82,8 +82,8 @@ importers:
         specifier: ^2.13.0
         version: 2.13.0
       svelte:
-        specifier: ^5.34.9
-        version: 5.34.9
+        specifier: ^5.35.0
+        version: 5.35.2
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -1633,8 +1633,8 @@ packages:
     resolution: {integrity: sha512-ca9pw9fomFcKPvFLXhBKUK90ZvGibiGOvRJNbjljY7s7uq/5YO4BOzcYtJqExdx99rF6aAcnRxHmcUHcz6sQsg==}
     engines: {node: '>=0.10'}
 
-  esrap@1.4.9:
-    resolution: {integrity: sha512-3OMlcd0a03UGuZpPeUC1HxR3nA23l+HEyCiZw3b3FumJIN9KphoGzDJKMXI1S72jVS1dsenDyQC0kJlO1U9E1g==}
+  esrap@2.1.0:
+    resolution: {integrity: sha512-yzmPNpl7TBbMRC5Lj2JlJZNPml0tzqoqP5B1JXycNUwtqma9AKCO0M2wHrdgsHcy1WRW7S9rJknAMtByg3usgA==}
 
   esrecurse@4.3.0:
     resolution: {integrity: sha512-KmfKL3b6G+RXvP8N1vr3Tq1kL/oCFgn2NYXEtqP8/L3pKapUA4G8cFVaoF3SU323CD4XypR/ffioHmkti6/Tag==}
@@ -2780,8 +2780,8 @@ packages:
       svelte:
         optional: true
 
-  svelte@5.34.9:
-    resolution: {integrity: sha512-sld35zFpooaSRSj4qw8Vl/cyyK0/sLQq9qhJ7BGZo/Kd0ggYtEnvNYLlzhhoqYsYQzA0hJqkzt3RBO/8KoTZOg==}
+  svelte@5.35.2:
+    resolution: {integrity: sha512-uW/rRXYrhZ7Dh4UQNZ0t+oVGL1dEM+95GavCO8afAk1IY2cPq9BcZv9C3um5aLIya2y8lIeLPxLII9ASGg9Dzw==}
     engines: {node: '>=18'}
 
   svgo@3.3.2:
@@ -2988,7 +2988,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@antfu/eslint-config@4.11.0(@eslint-react/eslint-plugin@1.52.2(eslint@9.30.1(jiti@2.4.2))(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3))(@typescript-eslint/utils@8.34.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.20(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-svelte@3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.34.9))(eslint@9.30.1(jiti@2.4.2))(svelte-eslint-parser@1.2.0(svelte@5.34.9))(typescript@5.8.3)':
+  '@antfu/eslint-config@4.11.0(@eslint-react/eslint-plugin@1.52.2(eslint@9.30.1(jiti@2.4.2))(ts-api-utils@2.1.0(typescript@5.8.3))(typescript@5.8.3))(@typescript-eslint/utils@8.34.0(eslint@9.30.1(jiti@2.4.2))(typescript@5.8.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-react-refresh@0.4.20(eslint@9.30.1(jiti@2.4.2)))(eslint-plugin-svelte@3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.35.2))(eslint@9.30.1(jiti@2.4.2))(svelte-eslint-parser@1.2.0(svelte@5.35.2))(typescript@5.8.3)':
     dependencies:
       '@antfu/install-pkg': 1.0.0
       '@clack/prompts': 0.10.0
@@ -3032,8 +3032,8 @@ snapshots:
       eslint-plugin-format: 1.0.1(eslint@9.30.1(jiti@2.4.2))
       eslint-plugin-react-hooks: 5.2.0(eslint@9.30.1(jiti@2.4.2))
       eslint-plugin-react-refresh: 0.4.20(eslint@9.30.1(jiti@2.4.2))
-      eslint-plugin-svelte: 3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.34.9)
-      svelte-eslint-parser: 1.2.0(svelte@5.34.9)
+      eslint-plugin-svelte: 3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.35.2)
+      svelte-eslint-parser: 1.2.0(svelte@5.35.2)
     transitivePeerDependencies:
       - '@eslint/json'
       - '@typescript-eslint/utils'
@@ -4524,7 +4524,7 @@ snapshots:
       '@types/estree': 1.0.7
       eslint: 9.30.1(jiti@2.4.2)
 
-  eslint-plugin-svelte@3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.34.9):
+  eslint-plugin-svelte@3.10.1(eslint@9.30.1(jiti@2.4.2))(svelte@5.35.2):
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.30.1(jiti@2.4.2))
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -4536,9 +4536,9 @@ snapshots:
       postcss-load-config: 3.1.4(postcss@8.5.3)
       postcss-safe-parser: 7.0.1(postcss@8.5.3)
       semver: 7.7.1
-      svelte-eslint-parser: 1.2.0(svelte@5.34.9)
+      svelte-eslint-parser: 1.2.0(svelte@5.35.2)
     optionalDependencies:
-      svelte: 5.34.9
+      svelte: 5.35.2
     transitivePeerDependencies:
       - ts-node
 
@@ -4680,7 +4680,7 @@ snapshots:
     dependencies:
       estraverse: 5.3.0
 
-  esrap@1.4.9:
+  esrap@2.1.0:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -5932,7 +5932,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-eslint-parser@1.2.0(svelte@5.34.9):
+  svelte-eslint-parser@1.2.0(svelte@5.35.2):
     dependencies:
       eslint-scope: 8.4.0
       eslint-visitor-keys: 4.2.1
@@ -5941,9 +5941,9 @@ snapshots:
       postcss-scss: 4.0.9(postcss@8.5.3)
       postcss-selector-parser: 7.1.0
     optionalDependencies:
-      svelte: 5.34.9
+      svelte: 5.35.2
 
-  svelte@5.34.9:
+  svelte@5.35.2:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -5954,7 +5954,7 @@ snapshots:
       axobject-query: 4.1.0
       clsx: 2.1.1
       esm-env: 1.2.2
-      esrap: 1.4.9
+      esrap: 2.1.0
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.17
