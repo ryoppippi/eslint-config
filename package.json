@@ -95,7 +95,7 @@
 		"pathe": "^2.0.3",
 		"publint": "^0.3.12",
 		"simple-git-hooks": "^2.13.0",
-		"svelte": "^5.36.2",
+		"svelte": "^5.36.4",
 		"typescript": "^5.8.3",
 		"unbuild": "^3.5.0"
 	},
