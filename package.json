@@ -97,7 +97,7 @@
 		"simple-git-hooks": "^2.13.1",
 		"svelte": "^5.38.1",
 		"typescript": "^5.9.2",
-		"unbuild": "^3.6.0"
+		"unbuild": "^3.6.1"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
