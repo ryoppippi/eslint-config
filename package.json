@@ -45,7 +45,7 @@
 		"lint:typecheck": "tsc --noEmit",
 		"format": "nr lint:eslint --fix",
 		"prepack": "nr build && clean-pkg-json",
-		"release": "nr lint && nlx bumpp && pnpm publish",
+		"release": "nr lint && nr build && nlx bumpp",
 		"prepare": "simple-git-hooks"
 	},
 	"peerDependencies": {
