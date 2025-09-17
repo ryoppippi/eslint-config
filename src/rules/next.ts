@@ -10,7 +10,6 @@ export async function next(enabled = false): Promise<TypedFlatConfigItem[]> {
 
 	await ensurePackages(['@next/eslint-plugin-next']);
 
-	// @ts-expect-error no dts
 	const nextPlugin: any = await interopDefault(import('@next/eslint-plugin-next'));
 	return [
 		{
