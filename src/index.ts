@@ -25,7 +25,7 @@ export async function ryoppippi(
 		options,
 		{
 			formatters: true,
-			svelte: true,
+			svelte: false,
 			yaml: true,
 			markdown: true,
 			typescript: {
