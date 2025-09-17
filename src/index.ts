@@ -85,6 +85,8 @@ export async function ryoppippi(
 		...tanstackRouterRules,
 		...reactRules,
 		/* svelte rules */
+
+		// eslint-disable-next-line ts/strict-boolean-expressions
 		(!_options.svelte)
 			? {}
 			: {
