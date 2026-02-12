@@ -74,7 +74,7 @@ importers:
         version: 16.1.6
       node:
         specifier: runtime:^24.5.0
-        version: runtime:24.11.1
+        version: runtime:24.13.1
       pathe:
         specifier: ^2.0.3
         version: 2.0.3
@@ -1683,6 +1683,7 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   globals@14.0.0:
@@ -2138,94 +2139,94 @@ packages:
   node-releases@2.0.27:
     resolution: {integrity: sha512-nmh3lCkYZ3grZvqcCH+fjmQ7X+H0OeZgP40OierEaAptX4XofMh5kwNbWh7lBduUzCcV/8kZ+NDLCwm2iorIlA==}
 
-  node@runtime:24.11.1:
+  node@runtime:24.13.1:
     resolution:
       type: variations
       variants:
         - resolution:
             archive: tarball
             bin: bin/node
-            integrity: sha256-mLqRmgOQ2MQi1LsxBexbd3I89UFDtMHkudd2kPoHUgY=
+            integrity: sha256-iuBmSe6dptnq29KhoLCRw7k8eMkbam7ImQmZOrW64q4=
             type: binary
-            url: https://nodejs.org/download/release/v24.11.1/node-v24.11.1-aix-ppc64.tar.gz
+            url: https://nodejs.org/download/release/v24.13.1/node-v24.13.1-aix-ppc64.tar.gz
           targets:
             - cpu: ppc64
               os: aix
         - resolution:
             archive: tarball
             bin: bin/node
-            integrity: sha256-sFqjpm7+aAAj+TC9WvP9u9VCeU2lZEyirXEdaMvU3DU=
+            integrity: sha256-jAOdWfL+xhleQoGtWw0CualAiXtN97hJxvtIvmeHu6Y=
             type: binary
-            url: https://nodejs.org/download/release/v24.11.1/node-v24.11.1-darwin-arm64.tar.gz
+            url: https://nodejs.org/download/release/v24.13.1/node-v24.13.1-darwin-arm64.tar.gz
           targets:
             - cpu: arm64
               os: darwin
         - resolution:
             archive: tarball
             bin: bin/node
-            integrity: sha256-CWCBttb83T9boPXx1EpH6DA3rS546tomZxwlL+ZN0RE=
+            integrity: sha256-Un8FeNmBLn36IlEhvaCxVGpqDktfVWKV/IKZwnLeX78=
             type: binary
-            url: https://nodejs.org/download/release/v24.11.1/node-v24.11.1-darwin-x64.tar.gz
+            url: https://nodejs.org/download/release/v24.13.1/node-v24.13.1-darwin-x64.tar.gz
           targets:
             - cpu: x64
               os: darwin
         - resolution:
             archive: tarball
             bin: bin/node
-            integrity: sha256-Dck+xceYsNNH8GjbbSBdA96ppxdl5qU5IraCuRJl1x8=
+            integrity: sha256-SHNFnXybKP6qHw+t6bucgctwJnCZH/gKUdgFMlxeNFY=
             type: binary
-            url: https://nodejs.org/download/release/v24.11.1/node-v24.11.1-linux-arm64.tar.gz
+            url: https://nodejs.org/download/release/v24.13.1/node-v24.13.1-linux-arm64.tar.gz
           targets:
             - cpu: arm64
               os: linux
         - resolution:
             archive: tarball
             bin: bin/node
-            integrity: sha256-zUFAfzNS3i8GbqJsXF0OqbY2I3TWthg4Wp8una0iBhY=
+            integrity: sha256-2oagoEtiLKvAyd6DYW6pN8HYoFqOr/iJVb3Bx+Ds7R0=
             type: binary
-            url: https://nodejs.org/download/release/v24.11.1/node-v24.11.1-linux-ppc64le.tar.gz
+            url: https://nodejs.org/download/release/v24.13.1/node-v24.13.1-linux-ppc64le.tar.gz
           targets:
             - cpu: ppc64le
               os: linux
         - resolution:
             archive: tarball
             bin: bin/node
-            integrity: sha256-XUyLyl+PJZP5CB3uOYNHYOhaFvphyVDz6G7IWZbwBVA=
+            integrity: sha256-1F5eM3qNN7VX11v6pPhU8yWIwqz5df98OeT9k64h1jA=
             type: binary
-            url: https://nodejs.org/download/release/v24.11.1/node-v24.11.1-linux-s390x.tar.gz
+            url: https://nodejs.org/download/release/v24.13.1/node-v24.13.1-linux-s390x.tar.gz
           targets:
             - cpu: s390x
               os: linux
         - resolution:
             archive: tarball
             bin: bin/node
-            integrity: sha256-WKX/XMjyIA5Fi+oi4ynVwZlKobER1JnKRuwkEdWCOco=
+            integrity: sha256-etKPsXKpqwWT+GwaOeXCaNDY/D1ssBZ/RVtWVaem4v0=
             type: binary
-            url: https://nodejs.org/download/release/v24.11.1/node-v24.11.1-linux-x64.tar.gz
+            url: https://nodejs.org/download/release/v24.13.1/node-v24.13.1-linux-x64.tar.gz
           targets:
             - cpu: x64
               os: linux
         - resolution:
             archive: zip
             bin: node.exe
-            integrity: sha256-zp7k5Ufr3/NVvrSOMJsWbCTfa+ApHJ6vEDzhXz3p5bQ=
-            prefix: node-v24.11.1-win-arm64
+            integrity: sha256-DNKe62TzxknbLEyGh3nKJ39aTEnibGnlko0B/grgbag=
+            prefix: node-v24.13.1-win-arm64
             type: binary
-            url: https://nodejs.org/download/release/v24.11.1/node-v24.11.1-win-arm64.zip
+            url: https://nodejs.org/download/release/v24.13.1/node-v24.13.1-win-arm64.zip
           targets:
             - cpu: arm64
               os: win32
         - resolution:
             archive: zip
             bin: node.exe
-            integrity: sha256-U1WubXxJ7dz959NKw0hoIGAKgxv4HcO9ylyNtqm7DnY=
-            prefix: node-v24.11.1-win-x64
+            integrity: sha256-+6V3xLuH3wTVTdh7vapaInLx+Zoqy/kVLhqRuLXwsnk=
+            prefix: node-v24.13.1-win-x64
             type: binary
-            url: https://nodejs.org/download/release/v24.11.1/node-v24.11.1-win-x64.zip
+            url: https://nodejs.org/download/release/v24.13.1/node-v24.13.1-win-x64.zip
           targets:
             - cpu: x64
               os: win32
-    version: 24.11.1
+    version: 24.13.1
     hasBin: true
 
   normalize-path@3.0.0:
@@ -5374,7 +5375,7 @@ snapshots:
 
   node-releases@2.0.27: {}
 
-  node@runtime:24.11.1: {}
+  node@runtime:24.13.1: {}
 
   normalize-path@3.0.0: {}
 
