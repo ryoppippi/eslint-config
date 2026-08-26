@@ -53,7 +53,7 @@
 		"@tanstack/eslint-plugin-query": ">= 5.83.1",
 		"@tanstack/eslint-plugin-router": ">= 1.131.2",
 		"eslint": ">= 9.33.0",
-		"eslint-plugin-tailwindcss": "^3.18.2"
+		"eslint-plugin-tailwindcss": "^4.4.0"
 	},
 	"peerDependenciesMeta": {
 		"@next/eslint-plugin-next": {
