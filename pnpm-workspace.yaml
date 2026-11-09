@@ -1,2 +1,10 @@
 minimumReleaseAge: 1440
+minimumReleaseAgeExcludePrune: true
+trustPolicy: no-downgrade
+shellEmulator: true
+
+onlyBuiltDependencies:
+  - esbuild
+  - simple-git-hooks
+
 useNodeVersion: 24.13.0
