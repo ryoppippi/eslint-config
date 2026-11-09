@@ -17,9 +17,6 @@ importers:
       eslint-plugin-ryoppippi:
         specifier: ^0.2.6
         version: 0.2.6(eslint@9.39.5(jiti@2.7.0))
-      eslint-plugin-tailwindcss:
-        specifier: ^4.4.0
-        version: 4.4.0(eslint@9.39.5(jiti@2.7.0))(tailwindcss@4.3.3)(typescript@6.0.3)
       pkg-types:
         specifier: ^2.3.0
         version: 2.4.0
@@ -39,9 +36,6 @@ importers:
       '@tanstack/eslint-plugin-router':
         specifier: ^1.131.2
         version: 1.162.0(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)
-      '@types/eslint-plugin-tailwindcss':
-        specifier: ^3.17.0
-        version: 3.17.0
       '@types/node':
         specifier: ^24.5.1
         version: 24.19.2
@@ -66,6 +60,9 @@ importers:
       eslint-plugin-svelte:
         specifier: ^3.12.3
         version: 3.23.1(eslint@9.39.5(jiti@2.7.0))(svelte@5.57.2(@typescript-eslint/types@8.72.0))
+      eslint-plugin-tailwindcss:
+        specifier: ^4.4.0
+        version: 4.4.0(eslint@9.39.5(jiti@2.7.0))(tailwindcss@4.3.5)(typescript@6.0.3)
       importx:
         specifier: ^0.5.2
         version: 0.5.2
@@ -87,6 +84,9 @@ importers:
       svelte:
         specifier: ^5.38.10
         version: 5.57.2(@typescript-eslint/types@8.72.0)
+      tailwindcss:
+        specifier: ^4.3.5
+        version: 4.3.5
       typescript:
         specifier: ^6.0.2
         version: 6.0.3
@@ -1088,12 +1088,6 @@ packages:
 
   '@types/debug@4.1.13':
     resolution: {integrity: sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw==}
-
-  '@types/eslint-plugin-tailwindcss@3.17.0':
-    resolution: {integrity: sha512-ucQGf2YIdTcndYcxRU3UdZgmhUHsOlbIF4BaRtl0op+7k2JmqM2i3aXZ6XIcfZgVq1ZKov7VM5c/BR81ukmkyg==}
-
-  '@types/eslint@9.6.1':
-    resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
 
   '@types/esrecurse@4.3.1':
     resolution: {integrity: sha512-xJBAbDifo5hpffDBuHl0Y8ywswbiAp/Wi7Y/GtAgSlZyIABppyurxVueOPE8LUQOxdlgi6Zqce7uoEpqNTeiUw==}
@@ -2967,8 +2961,8 @@ packages:
     peerDependencies:
       tailwindcss: ^3.3.0 || ^4.0.0 || ^4.0.0-beta
 
-  tailwindcss@4.3.3:
-    resolution: {integrity: sha512-gOhV3P7ufE62QDGg1zVaTgCR+EtPv92k2nIhVcVKcLmxT1sUBsQGhnZj175j+MqRt4zLF7ic+sCYjfhxMxj7YQ==}
+  tailwindcss@4.3.5:
+    resolution: {integrity: sha512-FcQk9BuffmEHJP2G0XmB2SplU1aLTI7j07Kunk+U74Ny+XiWOtzXz9aujFZ/avntw1e2cOv/3PkgzflQ7gX2vQ==}
 
   tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
@@ -3960,15 +3954,6 @@ snapshots:
     dependencies:
       '@types/ms': 2.1.0
 
-  '@types/eslint-plugin-tailwindcss@3.17.0':
-    dependencies:
-      '@types/eslint': 9.6.1
-
-  '@types/eslint@9.6.1':
-    dependencies:
-      '@types/estree': 1.0.9
-      '@types/json-schema': 7.0.15
-
   '@types/esrecurse@4.3.1': {}
 
   '@types/estree@1.0.9': {}
@@ -4793,15 +4778,15 @@ snapshots:
     transitivePeerDependencies:
       - ts-node
 
-  eslint-plugin-tailwindcss@4.4.0(eslint@9.39.5(jiti@2.7.0))(tailwindcss@4.3.3)(typescript@6.0.3):
+  eslint-plugin-tailwindcss@4.4.0(eslint@9.39.5(jiti@2.7.0))(tailwindcss@4.3.5)(typescript@6.0.3):
     dependencies:
       '@typescript-eslint/utils': 8.72.0(eslint@9.39.5(jiti@2.7.0))(typescript@6.0.3)
       eslint: 9.39.5(jiti@2.7.0)
       postcss: 8.5.31
       postcss-nested: 7.0.2(postcss@8.5.31)
       synckit: 0.11.13
-      tailwind-api-utils: 1.0.3(tailwindcss@4.3.3)
-      tailwindcss: 4.3.3
+      tailwind-api-utils: 1.0.3(tailwindcss@4.3.5)
+      tailwindcss: 4.3.5
     optionalDependencies:
       typescript: 6.0.3
     transitivePeerDependencies:
@@ -6112,14 +6097,14 @@ snapshots:
     dependencies:
       '@pkgr/core': 0.3.6
 
-  tailwind-api-utils@1.0.3(tailwindcss@4.3.3):
+  tailwind-api-utils@1.0.3(tailwindcss@4.3.5):
     dependencies:
       enhanced-resolve: 5.26.0
       jiti: 2.7.0
       local-pkg: 1.2.1
-      tailwindcss: 4.3.3
+      tailwindcss: 4.3.5
 
-  tailwindcss@4.3.3: {}
+  tailwindcss@4.3.5: {}
 
   tapable@2.3.3: {}
 
