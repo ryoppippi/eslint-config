@@ -4,6 +4,8 @@ import { defu } from 'defu';
 import { resolveTSConfig } from 'pkg-types';
 import { next, react, ryoppippi as ryoppippiRules, tailwindCss, tanstackQuery, tanstackRouter } from './rules';
 
+export type { ESLintConfig, UserConfigs, UserOptions } from './options';
+
 /**
  * @ryoppippi's ESLint configuration.
  *
