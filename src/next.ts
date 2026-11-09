@@ -1,8 +1,11 @@
-import type { ESLintConfig, UserOptions } from './options';
+import type { ESLintConfig, UserConfigs, UserOptions } from './options';
 import { defu } from 'defu';
 import { ryoppippi as baseRyoppippi } from './index';
 
-export const ryoppippi = (async (options, ...args): Promise<ESLintConfig> => {
+export const ryoppippi = (async (
+	options: UserOptions,
+	...args: UserConfigs[]
+): Promise<ESLintConfig> => {
 	const _options = defu(
 		options,
 		{
